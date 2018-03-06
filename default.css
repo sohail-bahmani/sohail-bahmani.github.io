@@ -75,7 +75,7 @@
     %min-width: 16pt;
 	height: inherit;
 	padding: 0pt 1em 0pt 1em;
-    background-image: url("home.png");
+    background-image: url("/home.png");
     background-size: 14pt;
     background-repeat: no-repeat;
     background-position: center;    
