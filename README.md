@@ -1,1 +1,0 @@
-# sohail-bahmani.github.io
