@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <!-- #BeginTemplate "template.dwt" -->
+  <head>
+      <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="https://fonts.googleapis.com/css?family=Catamaran:300" rel="stylesheet" type="text/css" />
+      <link href="default.css" rel="stylesheet" type="text/css"/>
+      <script type="text/javascript" src="accordion-pre.js"></script>
+      <link type="text/css" rel="stylesheet" href="accordion.css" />
+      <title>Sohail Bahmani</title>
+      <script src="ga-script.js"></script>
+    <!-- #BeginEditable "doctitle" -->
+      <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+      </script>
+      <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- #EndEditable -->
+  </head>
+  <body>
+    <div id="background" class="mainFrame">
+        <span class="navwrap">
+            <div id="menubar" class="row">            
+                <a class="menu" id="homemenu" href="#home"></a>
+                <div style="background-color: rgb(2, 209, 119);" class="vsep"></div>
+                <a class="menu" href="#research">Research</a>                
+                <div style="background-color: rgb(64, 176, 225);" class="vsep"></div>
+                <a class="menu" href="#talks">Talks</a>
+                <div style="background-color: rgb(2, 209, 119);" class="vsep"></div>
+                <a class="menu" href="#publications">Publications</a>
+                <div style="background-color: rgb(64, 176, 225);" class="vsep"></div>
+                <a class="menu marked" href="./CV.pdf">CV</a>
+            </div>
+        </span>
+        <div id="maincolumn" class="column">
+            <!-- #BeginEditable "MainText" -->
+            <span id="home" class="anchor"></span>
+            <div class="item">
+              <table style="width: 100%;">
+                <tbody>
+                  <tr>
+                    <td style="text-indent: 0px; min-width: 67%; text-align: left; vertical-align: top;">
+                      <h2>Sohail Bahmani</h2>
+                      <strong>Postdoctoral Fellow</strong><br />
+                      School of Electrical and Computer Engineering<br />
+                      Georgia Institute of Technology<br />
+                      <!-- Office: N/A<br />-->
+                        <img style="vertical-align: middle;" src="envelope.png" width="20pt">
+                      [first name]DOT[last name]AT[ece.gatech.edu] </td>
+                    <td style="text-align: right; vertical-align: top; margin: 0px; padding: 0px; min-width: 40%; max-height: 40%;">
+                      <img border="1" align="right" style="display: block; width: 100%; height: auto; max-width: 2.5in;" src="profile.jpg" /></td>
+                  </tr>
+                </tbody>
+              </table>
+              <hr style="width: 80%; height: 2px; background-color: rgb(100, 100, 100);" />
+              <h4>Research Interests</h4>
+              <p> My primary research interest is algorithmic and theoretical
+                aspects of <strong>statistical inference</strong> in areas such as
+                <strong>signal processing</strong>, <strong>machine learning</strong>,
+                and <strong>network analysis</strong>. My motivation is to design
+                provably accurate and computationally efficient algorithms for
+                statistical problems that arise in different applications, using <strong>probability
+                  theory</strong>, <strong>information theory</strong>, <strong>statistics</strong>,
+                and <strong>optimization</strong>.</p>
+              <h4>Education and Appointments</h4>
+              <ul style="margin-top: 0.5ex;">
+                <li>Postdoc, Georgia Institute of Technology, 2013–present</li>
+                <li>PhD in ECE, Carnegie Mellon University, 2009–2013</li>
+                <li>Master's in Engineering Science, Simon Fraser University,
+                  Canada, 2007–2008</li>
+                <li>Bachelor's in EE, Sharif University of Technology, Iran,
+                  2002–2006</li>
+              </ul>
+            </div>
+            <span id="research" class="anchor"></span>
+            <div class="item">
+              <h2>Research Vignette</h2>
+                <!-- Anchored Regression -->
+                <button class="accordion active"><div class="accordion-title marked">Regression with Convex Observations</div></button>
+                    <div class="panel no-js">
+                        <h4>Problem statement</h4>
+                        <p>Consider the problem of estimating an \(N\)-dimensional signal \(\boldsymbol{x}_\star\) from
+                        observations of the form
+                        <span class="eqanchor">
+                           \begin{align}
+                                    y_m & = f_m(\boldsymbol{x}_\star) + \xi_m & m=1,2,\dotsc,M\,,
+                                    \label{cvxreg}
+                            \end{align}
+                        </span>
+                        where the functions \(f_m\) are i.i.d. copies of a randomly drawn convex function \(f\), and the noise terms are represented by \(\xi_m\). Despite the convexity assumption on the functions \(f_m\), the observation model \eqref{cvxreg} is quite general and includes many standard statistical models as the special case including <i>generalized linear models</i> and <i>single hidden layer neural nets</i>. I addressed the general regression problem \eqref{cvxreg} in [<a href="#BR17b">BR17b</a>] building upon ideas I developed in [<a href="#BR17a">BR17a</a>] to address a special case often known as <i>phase retrieval</i>. It is more illustrative to begin my explanation with this special case as well.</p>
+                        <h4>A new approach to phase retrieval</h4>
+                        <p> The problem of phase retrieval appears in areas such as imaging and optics where the sensors often measure only intensities; the sign- (or phase-) information is generally lost. The observation model in the phase retrieval problem, assuming no noise in the measurements, can be abstracted as the system of quadratic equations
+                        \begin{equation*}
+                            \begin{aligned}
+                                y_1 & = |\boldsymbol{a}_1^*\boldsymbol{x}_\star|^2\\
+                                y_2 & = |\boldsymbol{a}_2^*\boldsymbol{x}_\star|^2\\
+                                \vdots &               \qquad\vdots\\
+                                y_M & = |\boldsymbol{a}_M^*\boldsymbol{x}_\star|^2\,,
+                            \end{aligned}
+                        \end{equation*}
+                        for \(\boldsymbol{x}_\star\in\mathbb{C}^N\). Clearly, this model corresponds to \eqref{cvxreg} with \(f_m(\boldsymbol{x}) = |\boldsymbol{a}_m^*\boldsymbol{x}|^2\) for i.i.d. draws of \(\boldsymbol{a}_m\), and \(\xi_m=0\). In [<a href="#BR17a">BR17a</a>], I formulated a new estimator for this problem as the convex program
+                        <span class="eqanchor">
+                        \begin{equation}
+                            \begin{aligned}
+                                \operatorname*{argmax}_{\boldsymbol{x}}\ &  \mathrm{Re}(\boldsymbol{a}_0^*\boldsymbol{x}) & \\
+                                \text{subject to}\ &    |\boldsymbol{a}_m^*\boldsymbol{x}|^2 \le y_m, &   m=1,2,\dotsc,M\,,
+                            \end{aligned} \label{linmax}
+                        \end{equation}
+                        </span>
+                        where \(\boldsymbol{a}_0\) denotes an &ldquo;anchor vector&rdquo; that obeys
+                        \begin{equation*}
+                          |\boldsymbol{a}_0^*\boldsymbol{x}_\star| \ge \delta \left\lVert\boldsymbol{a}_0\right\rVert_2 \left\lVert\boldsymbol{x}_\star\right\rVert_2\,,
+                        \end{equation*}
+                        for some absolute constant \(\delta \in (0,1]\). The anchor vector can be constructed from random observations similar to initializations in some non-convex methods (e.g., <a href="http://doi.org/10.1109/TIT.2015.2399924">Wirtinger Flow</a>); the details can be found in the paper. Here, I explain the geometric intuition behind \eqref{linmax}
+                        in the case of real-valued variables for clarity. As illustrated in Figure <a href="#slabs">1</a>, each of the constraints in \eqref{linmax} form a slab of feasible points, whose intersection is a convex polytope \(\mathcal{K}\). Clearly, \(\boldsymbol{x}_\star\) is an extreme point of \(\mathcal{K}\). The solution to \eqref{linmax} is also always an extreme point of \(\mathcal{K}\), since it is a solution to linear maximization over the convex body \(\mathcal{K}\). The key observation is that if the anchor vector \(\boldsymbol{a}_0\) has a non-trivial component in the direction of \(\boldsymbol{x}_\star\), we can expect that the extreme point found by \eqref{linmax} coincides with \(\boldsymbol{x}_\star\).</p>
+                        <span id="slabs" class="anchor"></span>
+                        <figure>
+                            <img style="margin-left: auto; margin-right: auto; display: block;" src="slabs.gif" alt="geometry of intersecting slabs" width="90%">
+                            <figcaption><strong>Figure 1.</strong> Geometry of slabs intersecting at \(\boldsymbol{x}_\star\) and their positioning with respect to the anchor \(\boldsymbol{a}_0\)</figcaption>
+                        </figure>
+                        <p>Using classic results from <em>statistical learning theory</em>, I showed that with high probability
+                        \begin{equation*}
+                            M = C_\delta N
+                        \end{equation*}
+                        independent random measurements suffice to recover \(\boldsymbol{x}_\star\)
+                        using \eqref{linmax}, with \(C_\delta\) being an absolute constant depending only on \(\delta\). Robustness under specific noise models is also addressed in the paper.</p>
+                        <h4>Why does \eqref{linmax} matter?</h4>
+                        <p>
+                            Previous convex relaxations for phase retrieval (e.g., <a href="http://dx.doi.org/10.1002/cpa.21432">PhaseLift</a>, and <a href="http://doi.org/10.1007/s10107-013-0738-9">PhaseCut</a>) were based on the idea of <i>lifting</i> and <i>semidefinite programming</i> (SDP). While lifting-based methods are technically computationally tractable, their dependence on SDP prohibits their scalability. In contrast, \eqref{linmax} operates in the natural domain of the problem and competes with non-convex methods for phase retrieval (e.g., <a href="http://doi.org/10.1109/TIT.2015.2399924">Wirtinger Flow</a>). It also benefits from versatility, flexibility, and robustness that is associated with convex programming. More importantly, as discussed below, the principles used in formulation and analysis of \eqref{linmax} apply in a more general setting.
+                        </p>
+                        <h4>What about the general case \eqref{cvxreg}?</h4>
+                        <p>In [<a href="#BR17b">BR17b</a>], I proposed the convex program
+                            <span class="eqanchor">
+                            \begin{equation}
+                                \begin{aligned}
+                                    \operatorname*{argmax}_{\boldsymbol{x}}\ & \langle \boldsymbol{a}_0,\boldsymbol{x}\rangle \\
+                                    \text{subject to}\ & \sum_{m=1}^M \max\{f_m(\boldsymbol{x})-y_m, 0\} \le \varepsilon\, ,
+                                \end{aligned} \label{anchored_reg}
+                            \end{equation}
+                            </span>
+                            where \(\boldsymbol{a}_0\) is an &ldquo;anchor vector&rdquo; that obeys
+                            \begin{equation*}
+                                \langle\boldsymbol{a}_0,\boldsymbol{x}_\star\rangle \ge \delta \left\lVert\boldsymbol{a}_0\right\rVert_2\left\lVert\boldsymbol{x}_\star\right\rVert_2\,,
+                            \end{equation*}
+                            as an estimator for the general regression problem \eqref{cvxreg}. Some schemes for constructing the anchor from the measurements are described in the paper, but we omit the discussion for brevity. Furthermore, to avoid technical details, here I state the main result of the paper (i.e., <a target="_blank" href="https://arxiv.org/pdf/1702.05327.pdf#page=9">Theorem 2.1</a>) on the sample complexity of \eqref{anchored_reg} in an informal way. In the proved bound, there are two important quantities. The first quantity, \(\mathfrak{C}_M(\mathcal{A}_\delta)\), measures the &ldquo;size&rdquo; of a set \(\mathcal{A}_\delta\) that depends only on \(\boldsymbol{x}_\star\) and \(\delta\), with respect to the randomness in the gradients \(\nabla f_m(\boldsymbol{x}_\star)\). The second quantity, \(p_\tau(\mathcal{A}_\delta)\), is some measure of the &ldquo;eccentricity&rdquo; of the random vector \(\nabla f_m(\boldsymbol{x}_\star)\) with respect to the set \(\mathcal{A}_\delta\) in terms of a parameter \(\tau\). Ignoring some details, the result established in [<a href="#BR17b">BR17b</a>] basically states that
+                            \begin{equation*}
+                                M \gtrsim \left(\frac{\mathfrak{C}_M(\mathcal{A}_\delta)}{\tau p_\tau(\mathcal{A}_\delta)}\right)^2\,,
+                            \end{equation*}
+                            measurements are sufficient to guarantee that \eqref{anchored_reg} yields an accurate estimate.
+                        </p>
+
+                        <h4>Bibliography</h4>
+                        <p> <span class="anchor" id="BR17a"></span>[BR17a] S. Bahmani and J. Romberg, <span class="semibold"><q><a class="marked" href="http://proceedings.mlr.press/v54/bahmani17a.html">Phase
+                            retrieval meets statistical learning theory: A flexible
+                            convex relaxation</a>,</q></span> <em>In Proceedings of the
+                          20th International Conference on Artificial Intelligence
+                          and Statistics (AISTATS'17)</em>, vol. 54 of Proceedings
+                        of Machine Learning Research , pp. 252–260.</p>
+                <p><span class="anchor" id="BR17b"></span> [BR17b] S. Bahmani and J. Romberg, <span class="semibold"><q><a class="marked" href="https://arxiv.org/abs/1702.05327">Solving equations of random convex functions via anchored regression</a>,</q></span> preprint: <code>arXiv:1702.05327 [cs.LG]</code></p>
+                    </div>
+                <!-- Alg. Connectivity under Site Perc. -->
+                <button class="accordion active"><div class="accordion-title marked">Network Connectivity Under Random Node Removal</div></button>
+                    <div class="panel no-js">
+                        <p> An important characteristic of networks in many applications is their connectivity which is often a crucial factor in the performance of the network. An interesting and important problem is then to measure robustness of the connectivity under some form of perturbation of the network. <i>Site percolation</i>, or simply random removal of nodes as illustrated in Figure <a href="#SitePerc">2</a>, is one of these perturbation models that is studied in mathematics and statistical physics.
+                        <span id="SitePerc" class="anchor"></span>
+                        <figure>
+                            <img style="margin-left: auto; margin-right: auto; display: block;" alt="" src="percolation.gif" width="90%">
+                            <figcaption><strong>Figure 2.</strong> Under a site percolation, the surviving subgraph is no longer connected</figcaption>
+                        </figure></p>
+                        <p><i>Algebraic connectivity</i> of a graph is a an analytical measure of connectivity that is also related to the conductance of the graph through the Cheeger's inequality. Formally, the algebraic connectivity of a graph with the adjacency matrix \(\boldsymbol{A}\) can be defined as <i>the second smallest eigenvalue</i> of the graph Laplacian \(\boldsymbol{L} = \boldsymbol{D} - \boldsymbol{A}\) where \(\boldsymbol{D}=\mathrm{diag}(\boldsymbol{A}\boldsymbol{1})\) is the diagonal matrix of the vertex degrees. In [<a href="#BRT17c">BRT17c</a>], using tools from random matrix theory I derived a lower bound for algebraic connectivity of a graph that survives from a generally non-homogeneous site percolation. In the special case of homogeneous site percolation over a certain class of regular graphs, our analytical result virtually coincides with the state-of-the-art that is established using refined combinatorial arguments.</p>
+                        <h4>Bibliography</h4>
+                        <p> <span class="anchor" id="BRT17c"></span>[BRT17c] S. Bahmani, J. Romberg, and P. Tetali, <span class="semibold"><q><a class="marked" href="https://doi.org/10.1109/TNSE.2017.2757762">Algebraic connectivity under site percolation in finite weighted graphs</a>,</q></span> to appear in <em>IEEE Trans. Network Science and Engineering</em>.</p>
+                    </div>
+
+            </div>
+            <span id="talks" class="anchor"></span>
+            <div class="item">
+              <h2>Talks</h2>
+              <ul>
+                <li><strong>Solving Equations of Random Convex Functions
+                    Efficiently:</strong><br />
+		  11/17 Machine Learning Department, Carnegie Mellon University<br />
+                  8/17 Adobe Research </li>
+                <li><strong>Phase Retrieval Meets Statistical Learning Theory:</strong><br />
+                  4/17 IBM T.J. Watson Research Center<br />
+                  4/17 Artificial Intelligence and Statistics conference
+                  (AISTATS'17)<br />
+                  2/17 Information Theory and Applications workshop (ITA'17)<br />
+                  2/17 Stochastic Seminar, School of Mathematics, Georgia Tech.</li>
+                <li><strong>Structured Matrix Estimation in High Dimensions</strong><br />
+                  6/16 School of Mathematics, University of Edinburgh<br />
+                  <!--Department of Mathematics and Computer Science, Sharif University of Technology, May 2016 -->
+                </li>
+              </ul>
+            </div>
+            <span id="publications" class="anchor"></span>
+            <div  class="item">
+              <h2>Publications</h2>
+              <ul class="paper">
+                <li class="jrn"> Journal Paper</li>
+                <li class="cnf"> Conference Paper</li>
+                <li class="sub"> Preprint</li>
+                <li class="rpt"> Technical Report</li>
+              </ul>
+              <h4>Preprints</h4>
+              <ol class="paper begin">
+                <li class="sub"> S. Bahmani and J. Romberg, <span class="semibold"><q>Solving
+                      equations of random convex functions via anchored regression,</q></span>
+                  submitted, 2017. <a class="hlink marked" href="https://arxiv.org/abs/1702.05327">arXiv</a></li>                
+              </ol>
+              <h4>2017</h4>
+              <ol class="paper">
+		<li class="jrn"> S. Bahmani and J. Romberg, <span class="semibold"><q>A
+                      flexible convex relaxation for phase retrieval,</q></span> <i>Electronic Journal of Statistics,</i> 11(2):5254&ndash;5281, 2017. (This is
+                  an extended version of the AISTATS’17 paper.) <a class="hlink marked" href="https://doi.org/10.1214/17-EJS1378SI">Proj. Euclid</a></li>
+                <li class="jrn"> S. Bahmani, J. Romberg, P. Tetali, <span class="semibold"><q>Algebraic
+                      connectivity under site percolation in finite weighted graphs,</q></span>
+                  to appear in <em>IEEE Trans. on Network Science and Engineering</em>.
+                  <a class="hlink marked" href="https://arxiv.org/abs/1612.05986">arXiv</a><a
+
+                    class="hlink" href="https://doi.org/10.1109/TNSE.2017.2757762">IEEEXplore</a></li>
+                <li class="cnf"> S. Bahmani and J. Romberg, <span class="semibold"><q>Phase
+                      retrieval meets statistical learning theory: A flexible convex
+                      relaxation,</q></span> <em>In Proceedings of the 20th
+                    International Conference on Artificial Intelligence and
+                    Statistics (AISTATS'17)</em>, vol. 54 of Proceedings of Machine
+                  Learning Research , pp. 252–260. (<strong>Best paper award</strong>)
+                  <a class="hlink marked" href="http://arxiv.org/abs/1610.04210">arXiv</a><a
+
+                    class="hlink marked" href="http://proceedings.mlr.press/v54/bahmani17a.html">PMLR</a></li>
+              </ol>
+              <h4>2016</h4>
+              <ol class="paper">
+                <li class="jrn"> S. Bahmani and J. Romberg, <span class="semibold"><q>Near-optimal
+                      estimation of simultaneously sparse and low-rank matrices from
+                      nested linear measurements,</q></span> <em>Information and
+                    Inference,</em> 5(3):331–351, 2016. <a class="hlink" href="http://arxiv.org/abs/1506.08159">arXiv</a><a
+
+                    class="hlink" href="http://dx.doi.org/10.1093/imaiai/iaw012">Oxford
+                    Journals</a></li>
+                <li class="jrn"> S. Bahmani, P. Boufounos, and B. Raj, <span class="semibold"><q>Learning
+                      model-based sparsity via projected gradient descent,</q></span>
+                  <i>IEEE Trans. Info. Theory</i>, 62(4):2092–2099, 2016. <a class="hlink"
+
+                    href="http://arxiv.org/abs/1209.1557">arXiv</a><a class="hlink"
+
+                    href="http://dx.doi.org/10.1109/TIT.2016.2515078">IEEEXplore</a></li>
+              </ol>
+              <h4>2015</h4>
+              <ol class="paper">
+                <li class="cnf"> S. Bahmani and J. Romberg, <span class="semibold"><q>Sketching
+                      for simultaneously sparse and low-rank covariance matrices,</q></span>
+                  in <em>Computational Advances in Multi-Sensor Adaptive Processing
+                    (CAMSAP'15), IEEE 6th International Workshop on</em>, pp.
+                  357–360, Cancun, Mexico, Dec. 2015.<a class="hlink" href="http://dx.doi.org/10.1109/CAMSAP.2015.7383810">IEEEXplore</a><a
+
+                    class="hlink" href="http://arxiv.org/abs/1510.01670">arXiv</a></li>
+                <li class="cnf"> S. Bahmani and J. Romberg, <span class="semibold">
+                    <q>Efficient compressive phase retrieval with constrained
+                      sensing vectors,</q></span> in <em>Advances in Neural
+                    Information Processing Systems (NIPS'15),</em> vol. 28, pp.
+                  523–531, Montr&eacute;al, Canada, Dec. 2015. <a class="hlink"
+
+                    href="http://arxiv.org/abs/1507.08254">arXiv</a><a class="hlink"
+
+                    href="https://papers.nips.cc/paper/6021-efficient-compressive-phase-retrieval-with-constrained-sensing-vectors">NIPS</a></li>
+                <li class="jrn"> S. Bahmani and J. Romberg, <span class="semibold"><q>Lifting
+                      for blind deconvolution in random mask imaging:
+                      Identifiability and convex relaxation,</q></span> <em>SIAM
+                    Journal on Imaging Sciences</em>, 8(4):2203–2238, 2015. <a class="hlink"
+
+                    href="http://arxiv.org/abs/1501.00046">arXiv</a><a class="hlink"
+                    href="http://dx.doi.org/10.1137/141002165">SIAM</a></li>
+                <li class="jrn"> S. Bahmani and J. Romberg, <span class="semibold"><q>Compressive
+                      deconvolution in random mask imaging,</q></span> <em>IEEE
+                    Trans. on Computational Imaging</em>, 1(4):236–246, 2015. <a class="hlink"
+
+                    href="http://arxiv.org/abs/1412.7890">arXiv</a><a class="hlink"
+
+                    href="http://dx.doi.org/10.1109/TCI.2015.2485941">IEEEXplore</a></li>
+              </ol>
+              <h4>2013</h4>
+              <ol class="paper">
+                <li class="jrn"> S. Bahmani, B. Raj, and P. T. Boufounos, <span class="semibold"><q>Greedy
+                      sparsity-constrained optimization,</q></span> <i>Journal of
+                    Machine Learning Research</i>, 14(3):807–841, 2013. <a class="hlink"
+
+                    href="http://jmlr.csail.mit.edu/papers/v14/bahmani13a.html">JMLR</a><a
+
+                    class="hlink" href="http://arxiv.org/abs/1203.5483">arXiv</a><a
+
+                    class="hclink" href="./GraSP.html">Code</a></li>
+                <li class="rpt"> S. Bahmani, P. Boufounos, and B. Raj, <span class="semibold"><q>Robust
+                      1-bit compressive sensing via gradient support pursuit,</q></span>
+                  Apr. 2013. <a class="hlink" href="http://arxiv.org/abs/1304.6627">arXiv</a></li>
+              </ol>
+              <h4>2012</h4>
+              <ol class="paper">
+                <li class="jrn"> S. Bahmani, B. Raj, <span class="semibold"><q>A
+                      unifying analysis of projected gradient descent for
+                      \(\ell_p\)-constrained least squares,</q></span> <em>Applied
+                    and Computational Harmonic Analysis</em>, 34(3):366–378, 2012. <a
+
+                    class="hlink" href="http://dx.doi.org/10.1016/j.acha.2012.07.004">Elsevier</a><a
+
+                    class="hlink" href="http://arxiv.org/abs/1107.4623">arXiv</a></li>
+              </ol>
+              <h4>2011</h4>
+              <ol class="paper">
+                <li class="cnf"> S. Bahmani, P. Boufonos, and B. Raj, <span class="semibold"><q>Greedy
+                      sparsity-constrained optimization,</q></span> in <i>Conf.
+                    Record of the 45th Asilomar Conference on Signals, Systems, and
+                    Computers (ASILOMAR'11)</i>, pp. 1148–1152, Pacific Grove, CA,
+                  Nov. 2011.
+                  <!--<a href="./docs/Asilomar%2711.pdf">Preprint</a>, --><a class="hlink"
+
+                    href="http://dx.doi.org/10.1109/ACSSC.2011.6190194">IEEEXplore</a><a
+
+                    class="hlink" href="./slides/Asilomar-SBahmani.pdf">Slides</a><a
+
+                    class="hclink" href="./GraSP.html">Code</a> </li>
+              </ol>
+              <h4>2010</h4>
+              <ol class="paper">
+                <li class="jrn"> S. Bahmani, I. Bajić, and A. HajShirmohammadi, <span
+
+                    class="semibold"><q>Joint decoding of unequally protected
+                      JPEG2000 images and Reed-Solomon codes,</q></span> <i>IEEE
+                    Trans. Image Processing</i>, 19(10):2693–2704, Oct. 2010. <a class="hlink"
+
+                    href="http://dx.doi.org/10.1109/TIP.2010.2049529">IEEEXplore</a></li>
+              </ol>
+              <h4>2009</h4>
+              <ol class="paper">
+                <li class="cnf"> S. Bahmani, I. Bajić, and A. HajShirmohammadi, <span
+
+                    class="semibold"><q>Improved joint source channel decoding of
+                      JPEG2000 images and Reed-Solomon codes,</q></span> <i> Proc.
+                    IEEE ICC'09</i>, Dresden, Germany, Jun. 2009. <a class="hlink"
+
+                    href="http://dx.doi.org/10.1109/ICC.2009.5305946">IEEEXplore</a></li>
+              </ol>
+              <h4>2008</h4>
+              <ol class="paper">
+                <li class="cnf"> S. Bahmani, I. Bajić, A. HajShirmohammadi, <span class="semibold"><q>Joint
+                      source channel decoding of JPEG2000 images with unequal loss
+                      protection,</q></span> <i>Proc. IEEE ICASSP'08</i>, pp.
+                  1365–1368, Las Vegas, NV, Mar. 2008. <a class="hlink" href="http://dx.doi.org/10.1109/ICASSP.2008.4517872">IEEEXplore</a></li>
+              </ol>
+              <h4>Thesis</h4>
+              <ul style="margin-top: 0.5ex; list-style-type: square;">
+                <li style="font-size: 95%;">S. Bahmani, <span class="semibold">Algorithms
+                    for sparsity-constrained optimization</span>, PhD dissertation,
+                  Department of Electrical &amp; Computer Engineernig, Carnegie
+                  Mellon University, Pittsburgh, PA, Feb. 2013. <a class="hlink" href="./Thesis.pdf">PDF</a></li>
+                <!--<a class="hlink" href="./Defense.pdf">Slides</a>-->
+                <!--
+                    <li>S. Bahmani, <span class="semibold">Joint source-channel decoding of JPEG2000 images with unequal loss protection,</span> Master's thesis, School of Engineering Science, Simon Fraser University, Burnaby, British Columbia, Canada, Nov. 2008. <a class="hlink" href="http://ir.lib.sfu.ca/bitstream/1892/10578/1/etd4224.pdf">PDF</a></li>-->
+              </ul>
+            </div>
+            <!-- #EndEditable -->
+              <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        </div>
+    </div>
+  </body>
+  <!-- #EndTemplate -->
+  <footer>
+		<script src="accordion.js"></script>
+  </footer>
+</html>
