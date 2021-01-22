@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'/>
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>Sohail Bahmani</title>
+<script src="ga-script.js"></script>
+<!-- #BeginEditable "doctitle" -->
+<!-- #EndEditable -->
+</head>
+
+<body>
+
+
+<div id="background" class="mainFrame">
+	<span class="navwrap">
+	<div id="menubar" class="row">
+		<div class="vsep" style="background-color: #40B0E1"></div>
+		<div class="menu" onclick="window.location.href='./index.html#home'">About</div>
+		<!--<div class="vsep" style="background-color: #999933"></div>
+		<div class="menu" onclick="window.location.href='./research.html'">Research</div>-->
+		<div class="vsep" style="background-color: #990000"></div>
+		<div class="menu" onclick="window.location.href='./index.html#publications'">Publications</div>
+		<!--<div class="vsep" style="background-color: #646464"></div>
+		<div class="menu" onclick="window.location.href='./GraSP.html'">GraSP</div>-->
+		<div class="vsep" style="background-color: #D17702"></div>
+		<div class="menu marked" onclick="window.location.href='./CV.pdf'">CV</div>	
+	</div>
+	</span>
+	<div id="maincolumn" class="column">
+	<!-- #BeginEditable "MainText" -->
+		<p>(MainText)</p>
+	<!-- #EndEditable -->	
+	</div>
+</div>
+</body>
+</html>
