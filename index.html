@@ -12,6 +12,7 @@
   <link type="text/css" rel="stylesheet" href="accordion.css" />
   <title>Sohail Bahmani</title>
   <script src="ga-script.js"></script>
+  <script async src="https://ipmeta.io/plugin.js"></script>
   <!-- #BeginEditable "doctitle" -->
   <script type="text/x-mathjax-config">
         MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
@@ -28,10 +29,11 @@
         <div style="background-color: rgb(2, 209, 119);" class="vsep"></div>
         <a class="menu" href="#research">Research</a>
         <div style="background-color: rgb(64, 176, 225);" class="vsep"></div>
-        <a class="menu" href="#talks">Talks</a>
-        <div style="background-color: rgb(2, 209, 119);" class="vsep"></div>
+        <!-- <a class="menu" href="#talks">Talks</a>
+        <div style="background-color: rgb(2, 209, 119);" class="vsep"></div> -->
         <a class="menu" href="#publications">Publications</a>
-        <div style="background-color: rgb(64, 176, 225);" class="vsep"></div>
+        <div style="background-color: rgb(2, 209, 119);" class="vsep"></div> 
+        <!-- <div style="background-color: rgb(64, 176, 225);" class="vsep"></div> -->
         <a class="menu marked" href="./CV.pdf">CV</a>
       </div>
     </span>
@@ -43,8 +45,8 @@
           <tbody>
             <tr>
               <td style="text-indent: 0px; min-width: 67%; text-align: left; vertical-align: top;">
-                <h2>Sohail Bahmani</h2>
-                <strong>Postdoctoral Fellow</strong><br />
+                <h2>Sohail Bahmani</h2>
+                <!-- <strong>Researcher</strong><br />-->
                 School of Electrical and Computer Engineering<br />
                 Georgia Institute of Technology<br />
                 <!-- Office: N/A<br />-->
@@ -53,30 +55,11 @@
               </td>
               <td
                 style="text-align: right; vertical-align: top; margin: 0px; padding: 0px; min-width: 40%; max-height: 40%;">
-                <img border="1" align="right" style="display: block; width: 100%; height: auto; max-width: 2.5in; border-radius: 50%"
+                <img border="0" align="right" style="display: block; width: 100%; height: auto; max-width: 2in; border-radius: 50%"
                   src="profilecsq.jpg" /></td>
             </tr>
           </tbody>
         </table>
-        <hr style="width: 80%; height: 2px; background-color: rgb(100, 100, 100);" />
-        <h4>Research Interests</h4>
-        <p> My primary research interest is algorithmic and theoretical
-          aspects of <strong>statistical inference</strong> in areas such as
-          <strong>signal processing</strong>, <strong>machine learning</strong>,
-          and <strong>network analysis</strong>. My motivation is to design and analyze
-          provably accurate and computationally efficient algorithms for
-          statistical problems that arise in different applications, using tools from <strong>probability
-            theory</strong>, <strong>information theory</strong>, <strong>statistics</strong>,
-          and <strong>optimization</strong>.</p>
-        <h4>Education and Appointments</h4>
-        <ul style="margin-top: 0.5ex;">
-          <li>Postdoc, Georgia Institute of Technology, 2013&ndash;present</li>
-          <li>PhD in ECE, Carnegie Mellon University, 2009&ndash;2013</li>
-          <li>Master's in Engineering Science, Simon Fraser University,
-            Canada, 2007&ndash;2008</li>
-          <li>Bachelor's in EE, Sharif University of Technology, Iran,
-            2002&ndash;2006</li>
-        </ul>
       </div>
       <span id="research" class="anchor"></span>
       <div class="item">
@@ -86,7 +69,7 @@
             <div class="accordion-title marked">Robust Mean Estimation via Empirical Characteristic Function</div>
         </button>
           <div class="panel no-js">
-              <p>Estimation of mean of a random variable is a fundamental problem of statistics since many estimation problems such as density estimation, regression, \(\ldots\), can be posed as mean estimation. The most benign and pedagogical example one can imagine is perhaps estimation of the mean of a random Gaussian vector in \(\mathbb{R}^d\), from a finite number of i.i.d. samples. The <i>sample mean</i>, the average of the observed samples, turns out to achieve the best possible <i>confidence interval</i> in the Gaussian setting. Unfortunately, the sample mean loses its glory as soon as we start dealing with heavy-tailed distributions or adversarially manipulated samples. In such unfavorable scenarios, the fundamental questions are then, &ldquo;<strong>How close can we get to the ideal confidence intervals?, With what kind of mean estimators?, and Whether such an estimators are computationally tractable?</strong>&rdquo; There has been great strides in this line of research recently; we highly recommend the great survey papers [<a href="#LM19">LM19</a>] and [<a href="#DK19">DK19</a>] for more details on these recent advances as well as the historical background.</p> 
+              <p>Estimation of mean of a random variable is a fundamental problem of statistics since many estimation problems such as density estimation, regression, \(\ldots\), can be posed as mean estimation. The most benign and pedagogical example one can imagine is perhaps estimation of the mean of a random Gaussian vector in \(\mathbb{R}^d\), from a finite number of i.i.d. samples. The <i>sample mean</i>, the average of the observed samples, turns out to achieve the best possible <i>confidence interval</i> in the Gaussian setting. Unfortunately, the sample mean loses its glory as soon as we start dealing with heavy-tailed distributions or adversarially manipulated samples. In such unfavorable scenarios, the fundamental questions are then, &ldquo;<strong>How close can we get to the ideal confidence intervals?, With what kind of mean estimators?, and Whether such estimators are computationally tractable?</strong>&rdquo; There has been great strides in this line of research recently; we highly recommend the great survey papers [<a href="#LM19">LM19</a>] and [<a href="#DK19">DK19</a>] for more details on these recent advances as well as the historical background.</p> 
              
               <p> In [<a href="#Bah20">Bah20</a>], we propose a competing mean estimator (in a separable Banach space) based on <i>empirical characteristic function</i>. For the sake of simpler exposition, we explain the ideas in the usual Euclidean setting. Given i.i.d. copies \(X_1,\dotsc,X_n\) of a random vector \(X\) in \(\mathbb{R}^d\), we want to estimate the mean of \(X\) denoted, by \(\mu_\star\) with error measured in the \(\ell_2\)-norm. <strong>The only restriction on the law of \(X\) is that the corresponding covariance matrix, \(\varSigma_\star\), exists and is bounded. Furthermore, we may face <i>strong contamination</i> of the samples, where for some \(\eta\in(0,1/2)\), an adversary may arbitrarily manipulate up to \(\eta n\) samples.</strong></p>
               <p> With the empirical characteristic function denoted by
@@ -95,7 +78,7 @@
                 \]
                 our proposed estimator is 
                 \[\widehat{\mu} \in \operatorname*{argmin}_\mu \max_{w\,:\,{\Vert w\Vert}\le r_n} \langle w, \mu\rangle - \mathrm{Im}(\varphi_n(w))\,,\nonumber\]
-                for appropriately chosen radius \(r_n>0\). In particular, in the non-adversarial setting, we show that by choosing \(r_n = \frac{22\log(1/\delta)}{n\epsilon}\), with probability at least \(1-\delta\) the estimator achieves the bound \(\|\hat{\mu}-\mu_\star\|\le \epsilon\), if the prescribed \(\epsilon\) obeys \[\epsilon \ge \max\Big\{64\sqrt{\frac{\mathrm{tr}(\varSigma_\star)}{n}}+12\sqrt{\frac{\|\varSigma_\star\|_{\mathrm{op}}\log(1/\delta)}{n}},\, 9{\left(\frac{\log(1/\delta)}{n}\right)}^{2/3}\|\mu_\star\|\Big\}\,.\nonumber\] We also prove a similar statement in the adversarial setting. Basically, the effect of contamination in terms of the contamination parameter \(\eta\in(0,1/2)\) is an additional term of order \(\sqrt{\eta\|\varSigma_\star\|_{\mathrm{op}}}\) that appears in the confidence interval. Both of the derived confidence intervals have an undesirable dependence on \(\|\mu_\star\|\) that hinders the ideal purely sub-Gaussian rate. In [<a href="#Bah20">Bah20</a>] we discuss ways to diminish this nuisance. Furthermore, we discuss how the estimator can be made oblivious to the accuracy level \(\epsilon\). The main drawback of the estimator is that, superficially, it does not appear to be computationally tractable.
+                for appropriately chosen radius \(r_n>0\). In particular, in the non-adversarial setting, we show that by choosing \(r_n = \frac{22\log(1/\delta)}{n\epsilon}\), with probability at least \(1-\delta\) the estimator achieves the bound \(\|\hat{\mu}-\mu_\star\|\le \epsilon\), if the prescribed \(\epsilon\) obeys \[\begin{align*} \epsilon & \ge \max\Big\{96\sqrt{\frac{\mathrm{tr}(\varSigma_\star)}{n}}+12\sqrt{\frac{\|\varSigma_\star\|_{\mathrm{op}}\log(1/\delta)}{n}},\\ & \hphantom{\max\Big\{ }\quad9{\left(\frac{\log(1/\delta)}{n}\right)}^{2/3}\|\mu_\star\|\Big\}\,.\end{align*}\] We also prove a similar statement in the adversarial setting. Basically, the effect of contamination in terms of the contamination parameter \(\eta\in(0,1/2)\) is an additional term of order \(\sqrt{\eta\|\varSigma_\star\|_{\mathrm{op}}}\) that appears in the confidence interval. Both of the derived confidence intervals have an undesirable dependence on \(\|\mu_\star\|\) that, even though vanishing at a rate \(n^{-2/3}\), prevents achieving the ideal purely sub-Gaussian rate. In [<a href="#Bah20">Bah20</a>] we discuss ways to diminish this nuisance. Furthermore, we discuss how the estimator can be made oblivious to the accuracy level \(\epsilon\). The main drawback of the estimator is that, superficially, it does not appear to be computationally tractable.
               </p>
               <h4>Bibliography</h4>
               <p>
@@ -399,116 +382,119 @@
         </div>
 
       </div>
-      <span id="talks" class="anchor"></span>
+      <!-- <span id="talks" class="anchor"></span>
       <div class="item">
-        <h2>Talks</h2>
-        <button class="accordion active">
-          <div class="accordion-title marked">2020</div>
+        <h2>Selected Talks</h2>
+        <!-- <button class="accordion active">
+          <div class="accordion-title">2020</div>
         </button>
         <div class="panel no-js">
             <ul class="noindent">    
             <li><strong>Convex Programming for Statistical Estimation: A New Perspective</strong><br />
                 1/20 Department of Mathematics, The National University of Singapore</li>
             </ul>
-        </div>
+        </div> - ->
         <button class="accordion active">
-          <div class="accordion-title marked">2019</div>
+          <div class="accordion-title">2019</div>
         </button>
         <div class="panel no-js">
             <ul class="noindent">
-            <li><strong>Matrix Desketching: Unlifted but Convex:</strong><br />
-            7/19 <a href="http://www.spars-workshop.org/en/index.html">SPARS'19</a> workshop, Toulouse<br />
-            <li><strong>Nonlinear Regression via Convex Programming:</strong><br />
-           10/19 Mathematics of Information, Data, & Signals seminar, Department of
-Mathematics, UC San Diego<br/>
-	    10/19 Algorithms, Combinatorics, & Optimization seminar, UC Irvine<br/>
-	    10/19 Department of Electrical & Computer Engineering, UC Riverside<br/>
-	    9/19 Department of Electrical & Computer Engineering, The Ohio State University<br/>
-            7/19 Texas A&amp;M Workshop in Analysis and Probability: <a
+            <li><a href="http://www.spars-workshop.org/en/index.html">SPARS'19</a> workshop, Toulouse</li>
+            <li> Mathematics of Information, Data, & Signals seminar,Department of Mathematics, UC San Diego</li>
+	          <li>Algorithms, Combinatorics, & Optimization seminar, UC Irvine</li>
+	    <!-- 10/19 Department of Electrical & Computer Engineering, UC Riverside<br/>
+	    9/19 Department of Electrical & Computer Engineering, The Ohio State University<br/> - ->
+            <li>Texas A&amp;M Workshop in Analysis and Probability: <a
               href="https://www.math.tamu.edu/~foucart/CW19/">Randomness and Determinism in Compressive Data
-              Acquisition</a>, College Station<br />
-            6/19 <a
-              href="https://www.osa.org/en-us/meetings/osa_meetings/osa_imaging_and_applied_optics_congress/program/mathematics_in_imaging/">Mathematics
-              in Imaging</a>, Munich<br />
-            2/19 Information Theory and Applications workshop (ITA'19), San Diego</li>
+              Acquisition</a>, College Station</li>
+            <li>Mathematics in Imaging; Imaging and Applied Optics Congress, Munich</li>
+            <li>Information Theory and Applications workshop (ITA'19), San Diego</li>
             </ul>
           </div>
           <button class="accordion active">
-          <div class="accordion-title marked">2018</div>
+          <div class="accordion-title">2018</div>
         </button>
           <div class="panel no-js">
         <ul class="noindent">
-        <li><strong>Bilinear Regression via Convex Programming without Lifting:</strong><br />
-            11/18 <a href="https://sites.google.com/view/itwist18">iTWIST'18</a> workshop, CIRM, Marseille
+        <li><a href="https://sites.google.com/view/itwist18">iTWIST'18</a> workshop, CIRM, Marseille
             <!--<a class="hclink marked" href="./iTWIST'18.pdf">slides</a>-->
           </li>
-          <li><strong>Rethinking Convex Programming for Statistical Estimation:</strong><br />
+          <!-- <li>
             3/18 Mitsubishi Electric Research Laboratories<br />
-            3/18 Department of Electrical Engineering, University of Hawaii at Manoa</li>
+            3/18 Department of Electrical Engineering, University of Hawaii at Manoa</li> - ->
          </ul>
           </div>
           <button class="accordion active">
-          <div class="accordion-title marked">2017</div>
+          <div class="accordion-title">2017</div>
         </button>
          <div class="panel no-js">
         <ul class="noindent">
-             <li><strong>Solving Equations of Random Convex Functions
+             <!-- <li><strong>Solving Equations of Random Convex Functions
               Efficiently:</strong><br />
             11/17 Machine Learning Department, Carnegie Mellon University<br />
-            8/17 Adobe Research </li>
-          <li><strong>Phase Retrieval Meets Statistical Learning Theory:</strong><br />
-            4/17 IBM T.J. Watson Research Center<br />
-            4/17 Artificial Intelligence and Statistics conference
-            (AISTATS'17), Ft. Lauderdale<br />
-            2/17 Information Theory and Applications workshop (ITA'17), San Diego<br />
-            2/17 Stochastic Seminar, School of Mathematics, Georgia Tech.</li>
+            8/17 Adobe Research </li> - ->
+          <li>
+             <!-- 4/17 IBM T.J. Watson Research Center<br /> - ->
+            Artificial Intelligence and Statistics conference>
+            (AISTATS'17), Ft. Lauderdale</li>
+          <li>Information Theory and Applications workshop (ITA'17), San Diego</li>
+          <li>Stochastic Seminar, School of Mathematics, Georgia Tech.</li>
         </ul>
-          </div>
+          <!-- </div>
             <button class="accordion active">
-          <div class="accordion-title marked">2016</div>
+          <div class="accordion-title">2016</div>
         </button>
          <div class="panel no-js">
         <ul class="noindent">
           <li><strong>Structured Matrix Estimation in High Dimensions</strong><br />
             6/16 School of Mathematics, University of Edinburgh<br />
-            <!--Department of Mathematics and Computer Science, Sharif University of Technology, May 2016 -->
+  
           </li>
-        </ul>
+        </ul> - ->
       </div>
-        </div>
+        </div> -->
       <span id="publications" class="anchor"></span>
       <div class="item">
         <h2>Publications</h2>
         <ul class="paper">
-          <li class="jrn"> Journal Paper</li>
-          <li class="cnf"> Conference Paper</li>
           <li class="sub"> In Review/Revision</li>
+          <li class="jrn"> Journal Paper</li>
+          <li class="cnf"> Conference Paper</li>        
           <li class="rpt"> Technical Report</li>
         </ul>
         <h4>In Review/Revision</h4>
         <ol class="paper begin">
-			<li class="sub"> S. Bahmani, <span class="semibold">&ldquo;Nearly optimal robust mean estimation via empirical characteristic function&rdquo;</span>, Apr. 2020. <a class="hlink marked" href="https://arxiv.org/abs/2004.02287">arXiv</a></li>
-			<li class="sub"> S. Bahmani, K. Lee, <span class="semibold">&ldquo;Low-rank matrix estimation from rank-one projections by unlifted convex optimization&rdquo;</span>, submitted, Apr. 2020. <a class="hlink marked" href="https://arxiv.org/abs/2004.02718">arXiv</a></li>
-          <li class="sub"> S. Bahmani, J. Romberg, <span class="semibold">&ldquo;Convex programming for estimation in
-                nonlinear recurrent models,&rdquo;</span> submitted, Aug. 2019. <a class="hlink marked"
-              href="https://arxiv.org/abs/1908.09915">arXiv</a><a class="hclink marked"
-              href="./Codes/Convex-RNN.ipynb" download>Code</a></li>
-          <li class="sub"> K. Lee, S. Bahmani, J. Romberg, Y. Eldar, <span class="semibold">&ldquo;Phase retrieval of
-                low-rank matrices by anchored regression,&rdquo;</span> in revision for <i>Information and Inference: A
-              Journal of the IMA</i>, 2018. <a class="hlink marked" href="https://arxiv.org/abs/1910.11477">arXiv</a></li>
+			<!--<li class="sub"> B. Ancelin, S. Bahmani, J. Romberg, <span class="semibold">&ldquo;Decentralized Feature-Distributed Optimization for Generalized Linear Models,&rdquo;</span> in review, 2021.<br><a class="hlink marked" href="https://arxiv.org/abs/2110.15283">arXiv</a></li>-->
+			<li class="sub"> S. Kim, S. Bahmani, K. Lee, <span class="semibold">&ldquo;Max-Linear Regression by Scalable and Guaranteed Convex Programming,&rdquo;</span> in review, 2021.<br><a class="hlink marked" href="https://arxiv.org/abs/2103.07020">arXiv</a></li>
         </ol>
+	<h4>2021</h4>
+	<ol class="paper">
+		<li class="jrn"> S. Bahmani, K. Lee, <span class="semibold">&ldquo;Low-rank matrix estimation from rank-one projections by unlifted convex optimization&rdquo;</span>, to appear in the <i>SIAM J. on Matrix Analysis and Applications</i>, 2021.<br><a class="hlink marked" href="https://arxiv.org/abs/2004.02718">arXiv</a></li>
+		<li class="jrn"> S. Bahmani, <span class="semibold">&ldquo;Nearly optimal robust mean estimation via empirical characteristic function,&rdquo;</span> <i>Bernoulli</i>, 27(3): 2139&ndash;2158, 2021.</br><a class="hlink marked" href="https://arxiv.org/abs/2004.02287">arXiv</a><a class="hlink marked" href="http://dx.doi.org/10.3150/20-BEJ1304">Proj. Euclid</a></li>
+	</ol>
+	<h4>2020</h4>
+	<ol class="paper">
+	  <li class="jrn"> S. Bahmani, J. Romberg, <span class="semibold">&ldquo;Convex programming for estimation in
+                nonlinear recurrent models,&rdquo;</span> <i>Journal of Machine Learning Research</i>, (235):1&ndash;20, 2020.</br><a class="hlink marked"
+              href="https://arxiv.org/abs/1908.09915">arXiv</a><a class="hlink marked"
+              href="https://jmlr.org/papers/v21/19-723.html">JMLR</a><a class="hclink marked"
+              href="./Codes/Convex-RNN.ipynb" download>Code</a></li>
+          <li class="jrn"> K. Lee, S. Bahmani, J. Romberg, Y. Eldar, <span class="semibold">&ldquo;Phase retrieval of
+                low-rank matrices by anchored regression,&rdquo;</span> <i>Information and Inference: A
+              Journal of the IMA</i>, 2020.</br><a class="hlink marked" href="https://arxiv.org/abs/1910.11477">arXiv</a><a class="hlink marked" href="https://doi.org/10.1093/imaiai/iaaa018">Oxford Journals</a></li>
+	</ol>
         <h4>2019</h4>
         <ol class="paper">
           <li class="jrn"> S. Bahmani, <span class="semibold">&ldquo;Estimation from nonlinear observations via convex
                 programming, with application to bilinear regression,&rdquo;</span> <i>Electronic J. of Statistics</i>,
-            13(1): 1978&ndash;2011. 2019. <a class="hlink marked" href="https://arxiv.org/abs/1806.07307">arXiv</a><a
-              class="hlink marked" href="https://projecteuclid.org/euclid.ejs/1560909647#abstract">Proj. Euclid</a></li>
+            13(1): 1978&ndash;2011. 2019.</br><a class="hlink marked" href="https://arxiv.org/abs/1806.07307">arXiv</a><a
+              class="hlink marked" href="http://dx.doi.org/10.1214/19-EJS1567">Proj. Euclid</a></li>
         </ol>
         <h4>2018</h4>
         <ol class="paper">
           <li class="jrn"> S. Bahmani and J. Romberg, <span class="semibold">&ldquo;Solving
                 equations of random convex functions via anchored regression,&rdquo;</span>
-            <i>Foundations of Computational Mathematics</i>, 19(4):813&ndash;841, 2019. <a class="hlink marked"
+            <i>Foundations of Computational Mathematics</i>, 19(4):813&ndash;841, 2019.</br><a class="hlink marked"
               href="https://arxiv.org/abs/1702.05327">arXiv</a><a class="hlink marked"
               href="https://doi.org/10.1007/s10208-018-9401-4">Springer</a></li>
           <li class="jrn"> S. Bahmani, J. Romberg, P. Tetali, <span class="semibold">&ldquo;Algebraic
@@ -522,7 +508,7 @@ Mathematics, UC San Diego<br/>
           <li class="jrn"> S. Bahmani and J. Romberg, <span class="semibold">&ldquo;A
                 flexible convex relaxation for phase retrieval,&rdquo;</span> <i>Electronic Journal of Statistics,</i>
             11(2):5254&ndash;5281, 2017. (This is
-            an extended version of the AISTATS’17 paper.) <a class="hlink marked"
+            an extended version of the AISTATS’17 paper.)<br/><a class="hlink marked"
               href="https://doi.org/10.1214/17-EJS1378SI">Proj. Euclid</a></li>
           <li class="cnf"> S. Bahmani and J. Romberg, <span class="semibold">&ldquo;Phase
                 retrieval meets statistical learning theory: A flexible convex
@@ -538,13 +524,13 @@ Mathematics, UC San Diego<br/>
           <li class="jrn"> S. Bahmani and J. Romberg, <span class="semibold">&ldquo;Near-optimal
                 estimation of simultaneously sparse and low-rank matrices from
                 nested linear measurements,&rdquo;</span> <i>Information and
-              Inference: A Journal of the IMA</i> 5(3):331&ndash;351, 2016. <a class="hlink"
+              Inference: A Journal of the IMA</i> 5(3):331&ndash;351, 2016.</br><a class="hlink"
               href="http://arxiv.org/abs/1506.08159">arXiv</a><a class="hlink"
               href="http://dx.doi.org/10.1093/imaiai/iaw012">Oxford
               Journals</a></li>
           <li class="jrn"> S. Bahmani, P. Boufounos, and B. Raj, <span class="semibold">&ldquo;Learning
                 model-based sparsity via projected gradient descent,&rdquo;</span>
-            <i>IEEE Trans. Info. Theory</i>, 62(4):2092&ndash;2099, 2016. <a class="hlink"
+            <i>IEEE Trans. Info. Theory</i>, 62(4):2092&ndash;2099, 2016.</br><a class="hlink"
               href="http://arxiv.org/abs/1209.1557">arXiv</a><a class="hlink"
               href="http://dx.doi.org/10.1109/TIT.2016.2515078">IEEEXplore</a></li>
         </ol>
@@ -560,19 +546,19 @@ Mathematics, UC San Diego<br/>
               &ldquo;Efficient compressive phase retrieval with constrained
                 sensing vectors,&rdquo;</span> in <em>Advances in Neural
               Information Processing Systems (NIPS'15),</em> vol. 28, pp.
-            523&ndash;531, Montr&eacute;al, Canada, Dec. 2015. <a class="hlink"
+            523&ndash;531, Montr&eacute;al, Canada, Dec. 2015.</br><a class="hlink"
               href="http://arxiv.org/abs/1507.08254">arXiv</a><a class="hlink"
               href="https://papers.nips.cc/paper/6021-efficient-compressive-phase-retrieval-with-constrained-sensing-vectors">NIPS</a>
           </li>
           <li class="jrn"> S. Bahmani and J. Romberg, <span class="semibold">&ldquo;Lifting
                 for blind deconvolution in random mask imaging:
                 Identifiability and convex relaxation,&rdquo;</span> <em>SIAM
-              Journal on Imaging Sciences</em>, 8(4):2203&ndash;2238, 2015. <a class="hlink"
+              Journal on Imaging Sciences</em>, 8(4):2203&ndash;2238, 2015.</br><a class="hlink"
               href="http://arxiv.org/abs/1501.00046">arXiv</a><a class="hlink"
               href="http://dx.doi.org/10.1137/141002165">SIAM</a></li>
           <li class="jrn"> S. Bahmani and J. Romberg, <span class="semibold">&ldquo;Compressive
                 deconvolution in random mask imaging,&rdquo;</span> <em>IEEE
-              Trans. on Computational Imaging</em>, 1(4):236&ndash;246, 2015. <a class="hlink"
+              Trans. on Computational Imaging</em>, 1(4):236&ndash;246, 2015.</br><a class="hlink"
               href="http://arxiv.org/abs/1412.7890">arXiv</a><a class="hlink"
               href="http://dx.doi.org/10.1109/TCI.2015.2485941">IEEEXplore</a></li>
         </ol>
@@ -580,20 +566,20 @@ Mathematics, UC San Diego<br/>
         <ol class="paper">
           <li class="jrn"> S. Bahmani, B. Raj, and P. T. Boufounos, <span class="semibold">&ldquo;Greedy
                 sparsity-constrained optimization,&rdquo;</span> <i>Journal of
-              Machine Learning Research</i>, 14(3):807&ndash;841, 2013. <a class="hlink"
+              Machine Learning Research</i>, 14(3):807&ndash;841, 2013.</br><a class="hlink"
               href="http://arxiv.org/abs/1203.5483">arXiv</a><a class="hlink"
               href="http://jmlr.csail.mit.edu/papers/v14/bahmani13a.html">JMLR</a><a class="hclink"
               href="./GraSP.html">Code</a></li>
           <li class="rpt"> S. Bahmani, P. Boufounos, and B. Raj, <span class="semibold">&ldquo;Robust
                 1-bit compressive sensing via gradient support pursuit,&rdquo;</span>
-            Apr. 2013. <a class="hlink" href="http://arxiv.org/abs/1304.6627">arXiv</a></li>
+            Apr. 2013.</br><a class="hlink" href="http://arxiv.org/abs/1304.6627">arXiv</a></li>
         </ol>
         <h4>2012</h4>
         <ol class="paper">
           <li class="jrn"> S. Bahmani, B. Raj, <span class="semibold">&ldquo;A
                 unifying analysis of projected gradient descent for
                 \(\ell_p\)-constrained least squares,&rdquo;</span> <em>Applied
-              and Computational Harmonic Analysis</em>, 34(3):366&ndash;378, 2012. <a class="hlink"
+              and Computational Harmonic Analysis</em>, 34(3):366&ndash;378, 2012.</br><a class="hlink"
               href="http://arxiv.org/abs/1107.4623">arXiv</a><a class="hlink"
               href="http://dx.doi.org/10.1016/j.acha.2012.07.004">Elsevier</a></li>
         </ol>
@@ -613,7 +599,7 @@ Mathematics, UC San Diego<br/>
           <li class="jrn"> S. Bahmani, I. Bajić, and A. HajShirmohammadi, <span class="semibold">&ldquo;Joint decoding of
                 unequally protected
                 JPEG2000 images and Reed-Solomon codes,&rdquo;</span> <i>IEEE
-              Trans. Image Processing</i>, 19(10):2693&ndash;2704, Oct. 2010. <a class="hlink"
+              Trans. Image Processing</i>, 19(10):2693&ndash;2704, Oct. 2010.</br><a class="hlink"
               href="http://dx.doi.org/10.1109/TIP.2010.2049529">IEEEXplore</a></li>
         </ol>
         <h4>2009</h4>
@@ -621,7 +607,7 @@ Mathematics, UC San Diego<br/>
           <li class="cnf"> S. Bahmani, I. Bajić, and A. HajShirmohammadi, <span class="semibold">&ldquo;Improved joint
                 source channel decoding of
                 JPEG2000 images and Reed-Solomon codes,&rdquo;</span> <i> Proc.
-              IEEE ICC'09</i>, Dresden, Germany, Jun. 2009. <a class="hlink"
+              IEEE ICC'09</i>, Dresden, Germany, Jun. 2009.</br><a class="hlink"
               href="http://dx.doi.org/10.1109/ICC.2009.5305946">IEEEXplore</a></li>
         </ol>
         <h4>2008</h4>
@@ -629,7 +615,7 @@ Mathematics, UC San Diego<br/>
           <li class="cnf"> S. Bahmani, I. Bajić, A. HajShirmohammadi, <span class="semibold">&ldquo;Joint
                 source channel decoding of JPEG2000 images with unequal loss
                 protection,&rdquo;</span> <i>Proc. IEEE ICASSP'08</i>, pp.
-            1365&ndash;1368, Las Vegas, NV, Mar. 2008. <a class="hlink"
+            1365&ndash;1368, Las Vegas, NV, Mar. 2008.</br><a class="hlink"
               href="http://dx.doi.org/10.1109/ICASSP.2008.4517872">IEEEXplore</a></li>
         </ol>
         <h4>Thesis</h4>
@@ -637,10 +623,10 @@ Mathematics, UC San Diego<br/>
           <li style="font-size: 95%;">S. Bahmani, <span class="semibold">Algorithms
               for sparsity-constrained optimization</span>, PhD dissertation,
             Department of Electrical &amp; Computer Engineernig, Carnegie
-            Mellon University, Pittsburgh, PA, Feb. 2013. <a class="hlink" href="./Thesis.pdf">PDF</a></li>
+            Mellon University, Pittsburgh, PA, Feb. 2013.</br><a class="hlink" href="./Thesis.pdf">PDF</a></li>
           <!--<a class="hlink" href="./Defense.pdf">Slides</a>-->
           <!--
-                    <li>S. Bahmani, <span class="semibold">Joint source-channel decoding of JPEG2000 images with unequal loss protection,</span> Master's thesis, School of Engineering Science, Simon Fraser University, Burnaby, British Columbia, Canada, Nov. 2008. <a class="hlink" href="http://ir.lib.sfu.ca/bitstream/1892/10578/1/etd4224.pdf">PDF</a></li>-->
+                    <li>S. Bahmani, <span class="semibold">Joint source-channel decoding of JPEG2000 images with unequal loss protection,</span> Master's thesis, School of Engineering Science, Simon Fraser University, Burnaby, British Columbia, Canada, Nov. 2008.</br><a class="hlink" href="http://ir.lib.sfu.ca/bitstream/1892/10578/1/etd4224.pdf">PDF</a></li>-->
         </ul>
       </div>
       <!-- #EndEditable -->
