@@ -73,6 +73,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span id="research" class="anchor"></span>
       <div class="item">
         <h2>Research Vignette</h2>
+        <!-- Instance-Dependent Tail Bounds for Empirical Processes-->
+        <button class="accordion active">
+          <div class="accordion-title marked">Instance-Dependent Tail Bounds for Empirical Processes</div>
+        </button>
+        <div class="panel no-js">
+          <p>Given a function class \(\mathcal{F}\) of functions from \(\mathbb{R}^d\) to \(\mathbb{R}\), and i.i.d. samples \(X_1,\dotsc,X_n\) of a random variable \(X\in \mathbb{R}^d\) such that \(\mathbb E f(X)=0\) for all \(f\in \mathcal{F}\), a fundamental problem in the theory of empirical processes is finding tail bounds for the empirical average \(\mathbb{E}_n f(X) \overset{\scriptscriptstyle\textrm{def}}{=} n^{-1}\sum_{i=1}^n f(X_i)\) that hold simultaneously for all \(f \in \mathcal{F}\). Such tail bounds are predominantly expressed as the sum of a term depending some notion of ``complexity'' of the function class (Rademacher complexity, V.C. dimension, etc), and a term that depends on the worst-case deviations of the random variables \(f(X)\) as \(f\) varies in the function class.</p>
+
+          <p>Under the appropriate distributional assumptionsSince for any single function \(f\in \mathcal{F}\), one can write a concentration inequality the depends on the deviations of the considered function \(f\) rather than the worst-case deviations across \(\mathcal{F}\). It is therefore natural to ask, if we can derive tail bounds for \(\mathbb{E}_n f\) that hold for every function in \(\mathcal{F}\), but consider instance-dependent deviations rather than the worst-case deviations.</p> 
+            
+           <p>In the case of Gaussian random variables and the class of linear functions defined by inner products with unit vectors, Lugosi and Mendelson [<a href="#LM20">LM20</a>] derived such instance-dependent tail bounds, and showed that it can provide significantly sharper inequalities compared to the conventional tail bounds. In [<a href="#Bah22">Bah22</a>], we showed how to derive instance-dependent tail bounds in a much broader setting described as follows. Let \(\lVert \cdot\rVert\) be some norm defined for functions in \(\mathcal{F}\), and for \(t\ge 0\) define the coefficients
+          \[w_t \overset{\scriptscriptstyle\textrm{def}}{=}\sup_{h\in \mathcal{F}-\mathcal{F}}\inf_{\lambda \ge 0}
+          \frac{t+\log\mathbb{E}e^{\lambda h(X)/\lVert h\rVert}}{\lambda}\nonumber\,.\] Furthermore, let \(A\) be a map from
+          \(\mathcal{F}\) to at most \(e^k\) functions in \(\mathcal{F}\), such that \(A[0]=0\) and \[\lVert A[f]\rVert \le \lVert f\rVert\mathcal\nonumber\,,\] for every \(f\in \mathcal{F}\). Define the set \[\mathcal{A} = \lbrace f - A[f]\colon\, f\in \mathcal{F}\rbrace\,.\nonumber\]
+          With \(\epsilon_\ell(\mathcal A)\) denoting the best approximation error of a covering set of \(\mathcal A\) with at most \(2^{2^\ell}\) elements, and \(\gamma(\mathcal A)\) denoting a certain analog of Talagrand's \(\gamma\) functional, we show in [<a href="#Bah22">Bah22</a>] that with probability at least \(1-2e^{-nr}\), for every \(f\in \mathcal{F}\) we have
+            \[\mathbb{E}_n f(X) \le  \gamma(\mathcal{A})  +2w_r \sum_{\ell = 0}^\infty \epsilon_\ell(\mathcal{A})+ w_{r+k/n}\lVert f\rVert\,. \nonumber\]
+          </p>
+          <h4>Bibliography</h4>
+          <p>
+            <span class="anchor" id="LM20"></span>
+            [LM20] G. Lugosi and S. Mendelson, <span class="semibold">&ldquo;<a
+                href="https://arxiv.org/abs/2010.11921">Multivariate mean estimation with direction-dependent
+                accuracy</a>,&rdquo;</span> arXiv preprint, 2020.
+          </p>
+          <p>
+            <span class="anchor" id="Bah20"></span>
+            [Bah22] S. Bahmani, <span class="semibold">&ldquo;<a class="marked" href="https://arxiv.org/abs/2209.10053">Instance-dependent uniform tail bounds for empirical processes</a>,&rdquo;</span> arXiv preprint, 2022.
+          </p>
+      
+        </div>
         <!--- Robust Mean Estimation --->  
         <button class="accordion active">
             <div class="accordion-title marked">Robust Mean Estimation via Empirical Characteristic Function</div>
