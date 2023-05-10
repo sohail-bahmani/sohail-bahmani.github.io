@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <!-- #BeginTemplate "template.dwt" -->
 
-<head> 
+<head>
   <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css?family=Catamaran:400&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:400&display=swap" rel="stylesheet">
   <link href="default.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="accordion-pre.js"></script>
   <link type="text/css" rel="stylesheet" href="accordion.css" />
@@ -14,12 +14,15 @@
   <!-- <script src="gtm-head.js"></script> -->
   <!-- <script src="ga-script.js"></script>-->
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NBJNM3C');</script>
-<!-- End Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NBJNM3C');</script>
+  <!-- End Google Tag Manager -->
   <script async src="https://ipmeta.io/plugin.js"></script>
   <!-- #BeginEditable "doctitle" -->
   <script type="text/x-mathjax-config">
@@ -30,10 +33,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBJNM3C"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBJNM3C" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <div id="background" class="mainFrame">
     <span class="navwrap">
       <div id="menubar" class="row">
@@ -44,7 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- <a class="menu" href="#talks">Talks</a>
         <div style="background-color: rgb(2, 209, 119);" class="vsep"></div> -->
         <a class="menu" href="#publications">Publications</a>
-        <div style="background-color: rgb(2, 209, 119);" class="vsep"></div> 
+        <div style="background-color: rgb(2, 209, 119);" class="vsep"></div>
         <!-- <div style="background-color: rgb(64, 176, 225);" class="vsep"></div> -->
         <a class="menu marked" href="./CV.pdf">CV</a>
       </div>
@@ -58,18 +61,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <tr>
               <td
                 style="text-align: right; vertical-align: top; margin: 0px; padding: 0px; min-width: 2in; max-height: 40%;">
-                <img border="0" align="left" style="display: block; width: 100%; height: auto; max-width: 2in; border-radius: 50%"
+                <img border="0" align="left"
+                  style="display: block; width: 100%; height: auto; max-width: 2in; border-radius: 50%"
                   src="profilecsq.jpg" />
-			  </td>
-			  <td style="text-indent: 0px; min-width: 67%; text-align: left; vertical-align: top;">
+              </td>
+              <td style="text-indent: 0px; min-width: 67%; text-align: left; vertical-align: top;">
                 <h1 style="font-size:36pt;">Sohail Bahmani</h1>
               </td>
-              
+
             </tr>
           </tbody>
         </table>
       </div>
-	  <br/>
+      <br />
       <span id="research" class="anchor"></span>
       <div class="item">
         <h2>Research Vignette</h2>
@@ -78,16 +82,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="accordion-title marked">Instance-Dependent Tail Bounds for Empirical Processes</div>
         </button>
         <div class="panel no-js">
-          <p>Given a function class \(\mathcal{F}\) of functions from \(\mathbb{R}^d\) to \(\mathbb{R}\), and i.i.d. samples \(X_1,\dotsc,X_n\) of a random variable \(X\in \mathbb{R}^d\) such that \(\mathbb E f(X)=0\) for all \(f\in \mathcal{F}\), a fundamental problem in the theory of empirical processes is finding tail bounds for the empirical average \(\mathbb{E}_n f(X) \overset{\scriptscriptstyle\textrm{def}}{=} n^{-1}\sum_{i=1}^n f(X_i)\) that hold simultaneously for all \(f \in \mathcal{F}\). Such tail bounds are predominantly expressed as the sum of a term depending on some notion of ``complexity'' of the function class (Rademacher complexity, V.C. dimension, etc), and a term that depends on the worst-case deviations of the random variables \(f(X)\) as \(f\) varies in the function class.</p>
+          <p>Given a function class \(\mathcal{F}\) in a normed vector space \(\left(\mathbb{V}, \lVert\cdot\rVert\right)\) of functions from \(\mathcal X\) to \(\mathbb{R}\), and i.i.d.
+            samples \(X_1,\dotsc,X_n\) of a random variable \(X\in \mathcal{X}\) such that \(\mathbb E f(X)=0\) for all
+            \(f\in \mathcal{F}\), a fundamental problem in the theory of empirical processes is finding tail bounds for
+            the empirical average \(\mathbb{E}_n f(X) \overset{\scriptscriptstyle\textrm{def}}{=} n^{-1}\sum_{i=1}^n
+            f(X_i)\) that hold simultaneously for all \(f \in \mathcal{F}\). Such tail bounds are predominantly
+            expressed as the sum of a term depending on some notion of ``complexity'' of the function class (Rademacher
+            complexity, V.C. dimension, etc), and a term that depends on the worst-case deviations of the random
+            variables \(f(X)\) as \(f\) varies in the function class.</p>
 
-          <p>Under the appropriate distributional assumptions, for any single function \(f\in \mathcal{F}\), one can write a concentration inequality the depends on the deviations of the considered function \(f\) rather than the worst-case deviations across \(\mathcal{F}\). It is therefore natural to ask, if we can derive tail bounds for \(\mathbb{E}_n f\) that hold for every function in \(\mathcal{F}\), but consider instance-dependent deviations rather than the worst-case deviations.</p> 
-            
-           <p>In the case of Gaussian random variables and the class of linear functions defined by inner products with unit vectors, Lugosi and Mendelson [<a href="#LM20">LM20</a>] derived such instance-dependent tail bounds, and showed that it can provide significantly sharper inequalities compared to the conventional tail bounds. In [<a href="#Bah22">Bah22</a>], we showed how to derive instance-dependent tail bounds in a much broader setting described as follows. Let \(\lVert \cdot\rVert\) be some norm defined for functions in \(\mathcal{F}\), and for \(t\ge 0\) define the coefficients
-          \[w_t \overset{\scriptscriptstyle\textrm{def}}{=}\sup_{h\in \mathcal{F}-\mathcal{F}}\inf_{\lambda \ge 0}
-          \frac{t+\log\mathbb{E}e^{\lambda h(X)/\lVert h\rVert}}{\lambda}\nonumber\,.\] Furthermore, let \(A\) be a map from
-          \(\mathcal{F}\) to at most \(e^k\) functions in \(\mathcal{F}\), such that \(A[0]=0\) and \[\lVert A[f]\rVert \le \lVert f\rVert\mathcal\nonumber\,,\] for every \(f\in \mathcal{F}\). Define the set \[\mathcal{A} = \lbrace f - A[f]\colon\, f\in \mathcal{F}\rbrace\,.\nonumber\]
-          With \(\epsilon_\ell(\mathcal A)\) denoting the best approximation error of a covering set of \(\mathcal A\) with at most \(2^{2^\ell}\) elements, and \(\gamma(\mathcal A)\) denoting a certain analog of Talagrand's \(\gamma\) functional, we show in [<a href="#Bah22">Bah22</a>] that with probability at least \(1-2e^{-nr}\), for every \(f\in \mathcal{F}\) we have
-            \[\mathbb{E}_n f(X) \le  \gamma(\mathcal{A})  +2w_r \sum_{\ell = 0}^\infty \epsilon_\ell(\mathcal{A})+ w_{r+k/n}\lVert f\rVert\,. \nonumber\]
+          <p>Under the appropriate distributional assumptions, for any single function \(f\in \mathcal{F}\), one can
+            write a concentration inequality the depends on the deviations of the considered function \(f\) rather than
+            the worst-case deviations across \(\mathcal{F}\). It is therefore natural to ask, if we can derive tail
+            bounds for \(\mathbb{E}_n f\) that hold for every function in \(\mathcal{F}\), but consider
+            instance-dependent deviations rather than the worst-case deviations.</p>
+
+          <p>In the case of Gaussian random variables and the class of linear functions defined by inner products with
+            unit vectors, Lugosi and Mendelson [<a href="#LM20">LM20</a>] derived such instance-dependent tail bounds,
+            and showed that it can provide significantly sharper inequalities compared to the conventional tail bounds.
+            In [<a href="#Bah22">Bah22</a>], we showed how to derive instance-dependent tail bounds in a much broader
+            setting described as follows. For \(t\ge 0\) define the coefficients
+            \[w_t \overset{\scriptscriptstyle\textrm{def}}{=}\sup_{h\in \mathcal{F}-\mathcal{F}}\inf_{\lambda \ge 0}
+            \frac{t+\log\mathbb{E}e^{\lambda h(X)/\lVert h\rVert}}{\lambda}\nonumber\,.\] Furthermore, let \(A\) be a
+            map from
+            \(\mathcal{F}\) to at most \(e^k\) functions in \(\mathcal{F}\), such that \(A[0]=0\) and \[\lVert
+            A[f]\rVert \le \lVert f\rVert\mathcal\nonumber\,,\] for every \(f\in \mathcal{F}\). Define the set
+            \[\mathcal{A} = \lbrace f - A[f]\colon\, f\in \mathcal{F}\rbrace\,.\nonumber\]
+            In [<a href="#Bah22">Bah22</a>] we define a certain generalization of Talagrand's (truncated)
+            \(\gamma_\alpha\) functionals as 
+            \[\gamma(\mathcal A;\underline{\ell},r) = \inf_{(\mathcal A_i)_{i\ge 0}}\sup_{a\in \mathcal A} \sum_{\ell \ge \underline{\ell}} w_{2^{\ell-\underline{\ell}+1}r}\lVert a - \mathcal A_\ell\rVert\,,\]
+            where the infimum is taken over an increasing <i>admissible</i> sequence of subsets of \(\mathcal A\) and \(\lVert a -\mathcal A_\ell\rVert\) denotes the distance of \(a\in \mathcal A\) from \(\mathcal A_\ell\). We show that with probability at least
+            \(1-2e^{-nr}\), for every \(f\in \mathcal{F}\) we have
+            \[\mathbb{E}_n f(X) \le 2\gamma(\mathcal{A};\, \lfloor \log_2(nr/5) \rfloor, r) +2w_r \mathrm{rad}(\mathcal{A})+
+            w_{r+k/n}\lVert f\rVert\,, \nonumber\]
+            where \(\mathrm{rad}\left(\mathcal{A}\right)\) is the radius of \(\mathcal{A}\) as measured by \(\lVert\cdot\rVert\).
           </p>
           <h4>Bibliography</h4>
           <p>
@@ -98,120 +126,168 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </p>
           <p>
             <span class="anchor" id="Bah22"></span>
-            [Bah22] S. Bahmani, <span class="semibold">&ldquo;<a class="marked" href="https://arxiv.org/abs/2209.10053">Instance-dependent uniform tail bounds for empirical processes</a>,&rdquo;</span> arXiv preprint, 2022.
+            [Bah22] S. Bahmani, <span class="semibold">&ldquo;<a class="marked"
+                href="https://arxiv.org/abs/2209.10053">Instance-dependent uniform tail bounds for empirical
+                processes</a>,&rdquo;</span> arXiv preprint, 2022.
           </p>
-      
+
         </div>
-        <!--- Robust Mean Estimation --->  
+        <!--- Robust Mean Estimation --->
         <button class="accordion active">
-            <div class="accordion-title marked">Robust Mean Estimation via Empirical Characteristic Function</div>
+          <div class="accordion-title marked">Robust Mean Estimation via Empirical Characteristic Function</div>
         </button>
-          <div class="panel no-js">
-              <p>Estimation of mean of a random variable is a fundamental problem of statistics since many estimation problems such as density estimation, regression, \(\ldots\), can be posed as mean estimation. The most benign and pedagogical example one can imagine is perhaps estimation of the mean of a random Gaussian vector in \(\mathbb{R}^d\), from a finite number of i.i.d. samples. The <i>sample mean</i>, the average of the observed samples, turns out to achieve the best possible <i>confidence interval</i> in the Gaussian setting. Unfortunately, the sample mean loses its glory as soon as we start dealing with heavy-tailed distributions or adversarially manipulated samples. In such unfavorable scenarios, the fundamental questions are then, &ldquo;<strong>How close can we get to the ideal confidence intervals?, With what kind of mean estimators?, and Whether such estimators are computationally tractable?</strong>&rdquo; There has been great strides in this line of research recently; we highly recommend the great survey papers [<a href="#LM19">LM19</a>] and [<a href="#DK19">DK19</a>] for more details on these recent advances as well as the historical background.</p> 
-             
-              <p> In [<a href="#Bah20">Bah20</a>], we propose a competing mean estimator (in a separable Banach space) based on <i>empirical characteristic function</i>. For the sake of simpler exposition, we explain the ideas in the usual Euclidean setting. Given i.i.d. copies \(X_1,\dotsc,X_n\) of a random vector \(X\) in \(\mathbb{R}^d\), we want to estimate the mean of \(X\) denoted, by \(\mu_\star\) with error measured in the \(\ell_2\)-norm. <strong>The only restriction on the law of \(X\) is that the corresponding covariance matrix, \(\varSigma_\star\), exists and is bounded. Furthermore, we may face <i>strong contamination</i> of the samples, where for some \(\eta\in(0,1/2)\), an adversary may arbitrarily manipulate up to \(\eta n\) samples.</strong></p>
-              <p> With the empirical characteristic function denoted by
-                \[
-                \varphi_n(w) = \frac{1}{n}\sum_{i=1}^n \exp(\langle w, X_i\rangle)\nonumber\,,
-                \]
-                our proposed estimator is 
-                \[\widehat{\mu} \in \operatorname*{argmin}_\mu \max_{w\,:\,{\Vert w\Vert}\le r_n} \langle w, \mu\rangle - \mathrm{Im}(\varphi_n(w))\,,\nonumber\]
-                for appropriately chosen radius \(r_n>0\). In particular, in the non-adversarial setting, we show that by choosing \(r_n = \frac{22\log(1/\delta)}{n\epsilon}\), with probability at least \(1-\delta\) the estimator achieves the bound \(\|\hat{\mu}-\mu_\star\|\le \epsilon\), if the prescribed \(\epsilon\) obeys \[\begin{align*} \epsilon & \ge \max\Big\{96\sqrt{\frac{\mathrm{tr}(\varSigma_\star)}{n}}+12\sqrt{\frac{\|\varSigma_\star\|_{\mathrm{op}}\log(1/\delta)}{n}},\\ & \hphantom{\max\Big\{ }\quad9{\left(\frac{\log(1/\delta)}{n}\right)}^{2/3}\|\mu_\star\|\Big\}\,.\end{align*}\] We also prove a similar statement in the adversarial setting. Basically, the effect of contamination in terms of the contamination parameter \(\eta\in(0,1/2)\) is an additional term of order \(\sqrt{\eta\|\varSigma_\star\|_{\mathrm{op}}}\) that appears in the confidence interval. Both of the derived confidence intervals have an undesirable dependence on \(\|\mu_\star\|\) that, even though vanishing at a rate \(n^{-2/3}\), prevents achieving the ideal purely sub-Gaussian rate. In [<a href="#Bah20">Bah20</a>] we discuss ways to diminish this nuisance. Furthermore, we discuss how the estimator can be made oblivious to the accuracy level \(\epsilon\). The main drawback of the estimator is that, superficially, it does not appear to be computationally tractable.
-              </p>
-              <h4>Bibliography</h4>
-              <p>
-                <span class="anchor" id="Bah20"></span>
-                [Bah20] S. Bahmani, <span class="semibold">&ldquo;<a class="marked"
-                    href="https://arxiv.org/pdf/2004.02287.pdf">Nearly optimal robust mean estimation via empirical characteristic function</a>,&rdquo;</span> arXiv preprint, 2020.
-              </p>
-              <p>
-                <span class="anchor" id="LM19"></span>
-                [LM19] G. Lugosi and S. Mendelson, <span class="semibold">&ldquo;<a href="https://doi.org/10.1007/s10208-019-09427-x">Mean estimation and regression under heavy-tailed distributions: A survey</a>,&rdquo;</span> Foundations of Computational Mathematics, 19(5):1145&ndash;1190, 2019.
-              </p>
-              <p>
-                <span class="anchor" id="DK8"></span>
-                [DK8] I. Diakonikolas and D. Kane, <span class="semibold">&ldquo;<a href="https://arxiv.org/abs/1911.05911">Recent advances in algorithmic high-dimensional robust statistics</a>,&rdquo;</span> arXiv preprint, 2019.
-              </p>
-          </div>
-  
+        <div class="panel no-js">
+          <p>Estimation of mean of a random variable is a fundamental problem of statistics since many estimation
+            problems such as density estimation, regression, \(\ldots\), can be posed as mean estimation. The most
+            benign and pedagogical example one can imagine is perhaps estimation of the mean of a random Gaussian vector
+            in \(\mathbb{R}^d\), from a finite number of i.i.d. samples. The <i>sample mean</i>, the average of the
+            observed samples, turns out to achieve the best possible <i>confidence interval</i> in the Gaussian setting.
+            Unfortunately, the sample mean loses its glory as soon as we start dealing with heavy-tailed distributions
+            or adversarially manipulated samples. In such unfavorable scenarios, the fundamental questions are then,
+            &ldquo;<strong>How close can we get to the ideal confidence intervals?, With what kind of mean estimators?,
+              and Whether such estimators are computationally tractable?</strong>&rdquo; There has been great strides in
+            this line of research recently; we highly recommend the great survey papers [<a href="#LM19">LM19</a>] and
+            [<a href="#DK19">DK19</a>] for more details on these recent advances as well as the historical background.
+          </p>
+
+          <p> In [<a href="#Bah20">Bah20</a>], we propose a competing mean estimator (in a separable Banach space) based
+            on <i>empirical characteristic function</i>. For the sake of simpler exposition, we explain the ideas in the
+            usual Euclidean setting. Given i.i.d. copies \(X_1,\dotsc,X_n\) of a random vector \(X\) in
+            \(\mathbb{R}^d\), we want to estimate the mean of \(X\) denoted, by \(\mu_\star\) with error measured in the
+            \(\ell_2\)-norm. <strong>The only restriction on the law of \(X\) is that the corresponding covariance
+              matrix, \(\varSigma_\star\), exists and is bounded. Furthermore, we may face <i>strong contamination</i>
+              of the samples, where for some \(\eta\in(0,1/2)\), an adversary may arbitrarily manipulate up to \(\eta
+              n\) samples.</strong></p>
+          <p> With the empirical characteristic function denoted by
+            \[
+            \varphi_n(w) = \frac{1}{n}\sum_{i=1}^n \exp(\langle w, X_i\rangle)\nonumber\,,
+            \]
+            our proposed estimator is
+            \[\widehat{\mu} \in \operatorname*{argmin}_\mu \max_{w\,:\,{\Vert w\Vert}\le r_n} \langle w, \mu\rangle -
+            \mathrm{Im}(\varphi_n(w))\,,\nonumber\]
+            for appropriately chosen radius \(r_n>0\). In particular, in the non-adversarial setting, we show that by
+            choosing \(r_n = \frac{22\log(1/\delta)}{n\epsilon}\), with probability at least \(1-\delta\) the estimator
+            achieves the bound \(\|\hat{\mu}-\mu_\star\|\le \epsilon\), if the prescribed \(\epsilon\) obeys
+            \[\begin{align*} \epsilon & \ge
+            \max\Big\{96\sqrt{\frac{\mathrm{tr}(\varSigma_\star)}{n}}+12\sqrt{\frac{\|\varSigma_\star\|_{\mathrm{op}}\log(1/\delta)}{n}},\\
+            & \hphantom{\max\Big\{
+            }\quad9{\left(\frac{\log(1/\delta)}{n}\right)}^{2/3}\|\mu_\star\|\Big\}\,.\end{align*}\] We also prove a
+            similar statement in the adversarial setting. Basically, the effect of contamination in terms of the
+            contamination parameter \(\eta\in(0,1/2)\) is an additional term of order
+            \(\sqrt{\eta\|\varSigma_\star\|_{\mathrm{op}}}\) that appears in the confidence interval. Both of the
+            derived confidence intervals have an undesirable dependence on \(\|\mu_\star\|\) that, even though vanishing
+            at a rate \(n^{-2/3}\), prevents achieving the ideal purely sub-Gaussian rate. In [<a
+              href="#Bah20">Bah20</a>] we discuss ways to diminish this nuisance. Furthermore, we discuss how the
+            estimator can be made oblivious to the accuracy level \(\epsilon\). The main drawback of the estimator is
+            that, superficially, it does not appear to be computationally tractable.
+          </p>
+          <h4>Bibliography</h4>
+          <p>
+            <span class="anchor" id="Bah20"></span>
+            [Bah20] S. Bahmani, <span class="semibold">&ldquo;<a class="marked"
+                href="https://arxiv.org/pdf/2004.02287.pdf">Nearly optimal robust mean estimation via empirical
+                characteristic function</a>,&rdquo;</span> arXiv preprint, 2020.
+          </p>
+          <p>
+            <span class="anchor" id="LM19"></span>
+            [LM19] G. Lugosi and S. Mendelson, <span class="semibold">&ldquo;<a
+                href="https://doi.org/10.1007/s10208-019-09427-x">Mean estimation and regression under heavy-tailed
+                distributions: A survey</a>,&rdquo;</span> Foundations of Computational Mathematics,
+            19(5):1145&ndash;1190, 2019.
+          </p>
+          <p>
+            <span class="anchor" id="DK8"></span>
+            [DK8] I. Diakonikolas and D. Kane, <span class="semibold">&ldquo;<a
+                href="https://arxiv.org/abs/1911.05911">Recent advances in algorithmic high-dimensional robust
+                statistics</a>,&rdquo;</span> arXiv preprint, 2019.
+          </p>
+        </div>
+
         <!-- RNN via Convex Programming -->
         <button class="accordion active">
           <div class="accordion-title marked">A Convex Programming Approach to Estimation in Recurrent Neural Nets</div>
         </button>
         <div class="panel no-js">
           Consider the trajectory \((\boldsymbol{u}_0, \boldsymbol{x}_0=\boldsymbol{0}),(\boldsymbol{u}_1,
-          \boldsymbol{x}_1),\dotsc,(\boldsymbol{u}_T, \boldsymbol{x}_T)\in\mathbb{R}^n\times\mathbb{R}^p\) of input-state pairs generated
+          \boldsymbol{x}_1),\dotsc,(\boldsymbol{u}_T, \boldsymbol{x}_T)\in\mathbb{R}^n\times\mathbb{R}^p\) of
+          input-state pairs generated
           by the recursion
-           \[
-             \begin{align}
-             \boldsymbol{x}_{t}=\nabla
-            f(\boldsymbol{A}_\star\boldsymbol{x}_{t-1}+\boldsymbol{B}_\star\boldsymbol{u}_{t-1})\,,\label{eq:RNN}
-            \end{align}
-            \]
-        
+          \[
+          \begin{align}
+          \boldsymbol{x}_{t}=\nabla
+          f(\boldsymbol{A}_\star\boldsymbol{x}_{t-1}+\boldsymbol{B}_\star\boldsymbol{u}_{t-1})\,,\label{eq:RNN}
+          \end{align}
+          \]
+
           where \(\nabla f\) is the gradient of a given <i>differentiable</i> and <i>convex</i> function \(f\), and
-          \(\boldsymbol{A}_\star\in\mathbb{R}^{n\times n}\), \(\boldsymbol{B}_\star\in\mathbb{R}^{n\times p}\) are model parametrs
-          we want to estimate. This observation model generalizes some common <i>recurrent neural net</i> (RNN) models. In particular,
+          \(\boldsymbol{A}_\star\in\mathbb{R}^{n\times n}\), \(\boldsymbol{B}_\star\in\mathbb{R}^{n\times p}\) are model
+          parametrs
+          we want to estimate. This observation model generalizes some common <i>recurrent neural net</i> (RNN) models.
+          In particular,
           an RNN with <i>Rectified Linear Unit</i> (ReLU) activations can be expressed in the above form by choosing
           \[
           \begin{align*}
-           f(\boldsymbol{x})\overset{\mathrm{\scriptscriptstyle def}}{=} \frac{1}{2}\sum_{i=1}^n
+          f(\boldsymbol{x})\overset{\mathrm{\scriptscriptstyle def}}{=} \frac{1}{2}\sum_{i=1}^n
           {\left(\max\left\{x_i,0\right\}\right)}^2\,.
           \end{align*}
           \]
-          
-          Let \(\beta>0\) be a sufficiently large normalizing parameter. We can express the recursion \eqref{eq:RNN} equivalently in
+
+          Let \(\beta>0\) be a sufficiently large normalizing parameter. We can express the recursion \eqref{eq:RNN}
+          equivalently in
           terms of
           \[
-            \begin{align*}
-            \boldsymbol{C}_\star=\begin{bmatrix} \boldsymbol{A}_\star & \beta^{-1}\boldsymbol{B}_\star\end{bmatrix}
-            \end{align*}
+          \begin{align*}
+          \boldsymbol{C}_\star=\begin{bmatrix} \boldsymbol{A}_\star & \beta^{-1}\boldsymbol{B}_\star\end{bmatrix}
+          \end{align*}
           \]
-           and
+          and
           \[
-            \begin{align*}
-            \boldsymbol{z}_t=\begin{bmatrix}\boldsymbol{x}_t\\ \beta\boldsymbol{u}_t\end{bmatrix}\,.
-            \end{align*}
+          \begin{align*}
+          \boldsymbol{z}_t=\begin{bmatrix}\boldsymbol{x}_t\\ \beta\boldsymbol{u}_t\end{bmatrix}\,.
+          \end{align*}
           \]
           Namely, for \(t\ge 1\) we have the recursion
           \[
-            \begin{align*}
-              \boldsymbol{z}_t=\begin{bmatrix}\nabla f(\boldsymbol{C}_\star\boldsymbol{z}_{t-1})\\
-              \beta \boldsymbol{u}_t \end{bmatrix}\,,
-            \end{align*}
+          \begin{align*}
+          \boldsymbol{z}_t=\begin{bmatrix}\nabla f(\boldsymbol{C}_\star\boldsymbol{z}_{t-1})\\
+          \beta \boldsymbol{u}_t \end{bmatrix}\,,
+          \end{align*}
           \]
           and at \(t=0\) we have
           \[
-            \begin{align*}
-              \boldsymbol{z}_0=\begin{bmatrix} \boldsymbol{0}\\
-              \beta \boldsymbol{u}_0 \end{bmatrix}\,.
-            \end{align*}
+          \begin{align*}
+          \boldsymbol{z}_0=\begin{bmatrix} \boldsymbol{0}\\
+          \beta \boldsymbol{u}_0 \end{bmatrix}\,.
+          \end{align*}
           \]
           It follows from the convexity of \(f\) and \eqref{eq:RNN} that
           \[
           \begin{align*}
-            f(\boldsymbol{C}\boldsymbol{z}_{t-1})-\langle\boldsymbol{x}_t, \boldsymbol{C}\boldsymbol{z}_{t-1}\rangle \ge
-            f(\boldsymbol{C}_\star\boldsymbol{z}_{t-1})-\langle\boldsymbol{x}_t, \boldsymbol{C}_\star\boldsymbol{z}_{t-1}
-            \rangle\,.
+          f(\boldsymbol{C}\boldsymbol{z}_{t-1})-\langle\boldsymbol{x}_t, \boldsymbol{C}\boldsymbol{z}_{t-1}\rangle \ge
+          f(\boldsymbol{C}_\star\boldsymbol{z}_{t-1})-\langle\boldsymbol{x}_t, \boldsymbol{C}_\star\boldsymbol{z}_{t-1}
+          \rangle\,.
           \end{align*}
           \]
           Therefore, we can formulate a convex program as an estimator for \(\boldsymbol{C}_\star\):
           \[
-            \begin{align*}
-              \widehat{\boldsymbol{C}} = \operatorname*{argmin}_{\boldsymbol{C}}\ \sum_{t=1}^T
+          \begin{align*}
+          \widehat{\boldsymbol{C}} = \operatorname*{argmin}_{\boldsymbol{C}}\ \sum_{t=1}^T
           f(\boldsymbol{C}\boldsymbol{z}_{t-1})-\langle\boldsymbol{x}_t, \boldsymbol{C}\boldsymbol{z}_{t-1}\rangle\,.
-            \end{align*}
+          \end{align*}
           \]
-          
-          In [<a href="#BR19">BR19</a>], under some additional assumptions on the nonlinearity and the distribution of the input, we showed that,
-          with high probability, a time horizon \(T\) that scales with \(n+p\), up to logarithmic factors, suffices for exact recovery
+
+          In [<a href="#BR19">BR19</a>], under some additional assumptions on the nonlinearity and the distribution of
+          the input, we showed that,
+          with high probability, a time horizon \(T\) that scales with \(n+p\), up to logarithmic factors, suffices for
+          exact recovery
           of \(\boldsymbol{C}_\star\) from a single trajectory.
-          
+
           <h4>Bibliography</h4>
           <p>
             <span class="anchor" id="BR19"></span>
-            [BR19] S. Bahmani and J. Romberg, <span class="semibold">&ldquo;<a class="marked" href="https://arxiv.org/abs/1908.09915">Convex programming for estimation in nonlinear recurrent
-            models</a>,&rdquo;</span> 2019.
+            [BR19] S. Bahmani and J. Romberg, <span class="semibold">&ldquo;<a class="marked"
+                href="https://arxiv.org/abs/1908.09915">Convex programming for estimation in nonlinear recurrent
+                models</a>,&rdquo;</span> 2019.
           </p>
         </div>
         <!-- Anchored Regression -->
@@ -227,7 +303,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           \begin{align*}
           y_m & = f_m(\boldsymbol{x}_\star) - g_m(\boldsymbol{x}_\star) + \xi_m\,, & m=1,\dotsc,M\,,
           \end{align*}
-          where the pairs of functions \((f_m,\,g_m)\) are i.i.d. copies of a pair of random <i>convex</i> functions \((f,\,g)\), and \(\xi_m\)
+          where the pairs of functions \((f_m,\,g_m)\) are i.i.d. copies of a pair of random <i>convex</i> functions
+          \((f,\,g)\), and \(\xi_m\)
           denotes the noise as in Part (I). Assuming that we have access to
           \begin{align}
           \boldsymbol{a}_0 & \approx \frac{1}{2M}\sum_{m=1}^M\nabla f_m(\boldsymbol{x}_\star) + \nabla
@@ -240,15 +317,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           \boldsymbol{x}\rangle - \frac{1}{M}\sum_{m=1}^M \max \left\lbrace f_m(\boldsymbol{x}) - y_m,
           g_m(\boldsymbol{x}) \right\rbrace\,.
           \end{align*}
-          Under mild <i>non-degeneracy</i> and <i>regularity</i> assumptions, we established in [<a href="#Bah18">Bah18</a>]
+          Under mild <i>non-degeneracy</i> and <i>regularity</i> assumptions, we established in [<a
+            href="#Bah18">Bah18</a>]
           a sample complexity for guaranteed accuracy of \(\widehat{\boldsymbol{x}}\) using a PAC-Bayesian analysis. To
           provide a concrete example we also studied <i>bilinear regression</i> with standard Gaussian factors as a
           special case; for this problem we also described a method to create a vector \(\boldsymbol{a}_0\) that
           provably satisfies the required approximation \eqref{a0-approx}.
           <h4>Bibliography</h4>
           <p><span class="anchor" id="Bah18"></span> [Bah18] S. Bahmani, <span class="semibold">&ldquo;<a class="marked"
-                  href="https://projecteuclid.org/euclid.ejs/1560909647">Estimation from nonlinear observations via
-                  convex programming, with application to bilinear regression</a>,&rdquo;</span> <i>Elect. J.
+                href="https://projecteuclid.org/euclid.ejs/1560909647">Estimation from nonlinear observations via
+                convex programming, with application to bilinear regression</a>,&rdquo;</span> <i>Elect. J.
               Statistics</i>, 13(1): 1978&ndash;2011, 2019.</p>
 
         </div>
@@ -271,7 +349,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             including <i>generalized linear models</i> and <i>single hidden layer neural nets</i>. I addressed the
             general regression problem \eqref{cvxreg} in [<a href="#BR17b">BR17b</a>] building upon ideas I developed in
             [<a href="#BR17a">BR17a</a>] to address a special case often known as <i>phase retrieval</i>. It is more
-            illustrative to begin my explanation with this special case as well.</p>
+            illustrative to begin my explanation with this special case as well.
+          </p>
           <h4>A new approach to phase retrieval</h4>
           <p> The problem of phase retrieval appears in areas such as imaging and optics where the sensors often measure
             only intensities; the sign- (or phase-) information is generally lost. The observation model in the phase
@@ -312,7 +391,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             \eqref{linmax} is also always an extreme point of \(\mathcal{K}\), since it is a solution to linear
             maximization over the convex body \(\mathcal{K}\). The key observation is that if the anchor vector
             \(\boldsymbol{a}_0\) has a non-trivial component in the direction of \(\boldsymbol{x}_\star\), we can expect
-            that the extreme point found by \eqref{linmax} coincides with \(\boldsymbol{x}_\star\).</p>
+            that the extreme point found by \eqref{linmax} coincides with \(\boldsymbol{x}_\star\).
+          </p>
           <span id="slabs" class="anchor"></span>
           <figure>
             <img style="margin-left: auto; margin-right: auto; display: block;" src="slabs.gif"
@@ -374,15 +454,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           <h4>Bibliography</h4>
           <p> <span class="anchor" id="BR17a"></span>[BR17a] S. Bahmani and J. Romberg, <span class="semibold">&ldquo;<a
-                  class="marked" href="http://proceedings.mlr.press/v54/bahmani17a.html">Phase
-                  retrieval meets statistical learning theory: A flexible
-                  convex relaxation</a>,&rdquo;</span> <em>In Proceedings of the
+                class="marked" href="http://proceedings.mlr.press/v54/bahmani17a.html">Phase
+                retrieval meets statistical learning theory: A flexible
+                convex relaxation</a>,&rdquo;</span> <em>In Proceedings of the
               20th International Conference on Artificial Intelligence
               and Statistics (AISTATS'17)</em>, vol. 54 of Proceedings
             of Machine Learning Research , pp. 252&ndash;260.</p>
           <p><span class="anchor" id="BR17b"></span> [BR17b] S. Bahmani and J. Romberg, <span class="semibold">&ldquo;<a
-                  class="marked" href="https://arxiv.org/abs/1702.05327">Solving equations of random convex functions
-                  via anchored regression</a>,&rdquo;</span> <i>Foundations of Computational Mathematics</i>,
+                class="marked" href="https://arxiv.org/abs/1702.05327">Solving equations of random convex functions
+                via anchored regression</a>,&rdquo;</span> <i>Foundations of Computational Mathematics</i>,
             19(4):813&ndash;841, 2019.</p>
         </div>
         <!-- Alg. Connectivity under Site Perc. -->
@@ -396,12 +476,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             simply random removal of nodes as illustrated in Figure <a href="#SitePerc">2</a>, is one of these
             perturbation models that is studied in mathematics and statistical physics.
             <span id="SitePerc" class="anchor"></span>
-            <figure>
-              <img style="margin-left: auto; margin-right: auto; display: block;" alt="" src="percolation.gif"
-                width="90%">
-              <figcaption><strong>Figure 2.</strong> Under a site percolation, the surviving subgraph is no longer
-                connected</figcaption>
-            </figure>
+          <figure>
+            <img style="margin-left: auto; margin-right: auto; display: block;" alt="" src="percolation.gif"
+              width="90%">
+            <figcaption><strong>Figure 2.</strong> Under a site percolation, the surviving subgraph is no longer
+              connected</figcaption>
+          </figure>
           </p>
           <p><i>Algebraic connectivity</i> of a graph is a an analytical measure of connectivity that is also related to
             the conductance of the graph through the Cheeger's inequality. Formally, the algebraic connectivity of a
@@ -415,118 +495,137 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <h4>Bibliography</h4>
           <p> <span class="anchor" id="BRT18"></span>[BRT18] S. Bahmani, J. Romberg, and P. Tetali, <span
               class="semibold">&ldquo;<a class="marked" href="https://doi.org/10.1109/TNSE.2017.2757762">Algebraic
-                  connectivity under site percolation in finite weighted graphs</a>,&rdquo;</span> <em>IEEE Trans. Network
+                connectivity under site percolation in finite weighted graphs</a>,&rdquo;</span> <em>IEEE Trans. Network
               Science and Engineering</em>, 5(2):86&ndash;91, 2018.</p>
         </div>
 
       </div>
-      
+
       <span id="publications" class="anchor"></span>
       <div class="item">
         <h2>Publications</h2>
         <ul class="paper">
           <li class="sub"> In Review/Revision</li>
           <li class="jrn"> Journal Paper</li>
-          <li class="cnf"> Conference Paper</li>        
+          <li class="cnf"> Conference Paper</li>
           <li class="rpt"> Technical Report</li>
         </ul>
         <h4>In Review/Revision</h4>
         <ol class="paper begin">
-			<li class="sub"> S. Bahmani, <span class="semibold">&ldquo;Instance-dependent uniform tail bounds for empirical processes,&rdquo;</span> 2022.<br><a class="hlink marked" href="http://arxiv.org/abs/2209.10053">arXiv</a></li>
-			<li class="sub"> B. Ancelin, S. Bahmani, J. Romberg, <span class="semibold">&ldquo;Decentralized feature-distributed optimization for generalized linear models,&rdquo;</span> in review, 2021.<br><a class="hlink marked" href="https://arxiv.org/abs/2110.15283">arXiv</a></li>
-			<li class="sub"> S. Kim, S. Bahmani, K. Lee, <span class="semibold">&ldquo;Max-linear regression by scalable and guaranteed convex programming,&rdquo;</span> in review, 2021.<br><a class="hlink marked" href="https://arxiv.org/abs/2103.07020">arXiv</a></li>
+          <li class="sub"> S. Bahmani, <span class="semibold">&ldquo;Instance-dependent uniform tail bounds for
+              empirical processes,&rdquo;</span> 2022.<br><a class="hlink marked"
+              href="http://arxiv.org/abs/2209.10053">arXiv</a></li>
+          <li class="sub"> B. Ancelin, S. Bahmani, J. Romberg, <span class="semibold">&ldquo;Decentralized
+              feature-distributed optimization for generalized linear models,&rdquo;</span> in review, 2021.<br><a
+              class="hlink marked" href="https://arxiv.org/abs/2110.15283">arXiv</a></li>
+          <li class="sub"> S. Kim, S. Bahmani, K. Lee, <span class="semibold">&ldquo;Max-linear regression by scalable
+              and guaranteed convex programming,&rdquo;</span> in review, 2021.<br><a class="hlink marked"
+              href="https://arxiv.org/abs/2103.07020">arXiv</a></li>
         </ol>
-	<h4>2021</h4>
-	<ol class="paper">
-		<li class="jrn"> S. Bahmani, K. Lee, <span class="semibold">&ldquo;Low-rank matrix estimation from rank-one projections by unlifted convex optimization&rdquo;</span>, to appear in the <i>SIAM J. on Matrix Analysis and Applications</i>, 2021.<br><a class="hlink marked" href="https://arxiv.org/abs/2004.02718">arXiv</a></li>
-		<li class="jrn"> S. Bahmani, <span class="semibold">&ldquo;Nearly optimal robust mean estimation via empirical characteristic function,&rdquo;</span> <i>Bernoulli</i>, 27(3): 2139&ndash;2158, 2021.</br><a class="hlink marked" href="https://arxiv.org/abs/2004.02287">arXiv</a><a class="hlink marked" href="http://dx.doi.org/10.3150/20-BEJ1304">Proj. Euclid</a></li>
-	</ol>
-	<h4>2020</h4>
-	<ol class="paper">
-	  <li class="jrn"> S. Bahmani, J. Romberg, <span class="semibold">&ldquo;Convex programming for estimation in
-                nonlinear recurrent models,&rdquo;</span> <i>Journal of Machine Learning Research</i>, (235):1&ndash;20, 2020.</br><a class="hlink marked"
-              href="https://arxiv.org/abs/1908.09915">arXiv</a><a class="hlink marked"
+        <h4>2021</h4>
+        <ol class="paper">
+          <li class="jrn"> S. Bahmani, K. Lee, <span class="semibold">&ldquo;Low-rank matrix estimation from rank-one
+              projections by unlifted convex optimization&rdquo;</span>, to appear in the <i>SIAM J. on Matrix Analysis
+              and Applications</i>, 2021.<br><a class="hlink marked" href="https://arxiv.org/abs/2004.02718">arXiv</a>
+          </li>
+          <li class="jrn"> S. Bahmani, <span class="semibold">&ldquo;Nearly optimal robust mean estimation via empirical
+              characteristic function,&rdquo;</span> <i>Bernoulli</i>, 27(3): 2139&ndash;2158, 2021.</br><a
+              class="hlink marked" href="https://arxiv.org/abs/2004.02287">arXiv</a><a class="hlink marked"
+              href="http://dx.doi.org/10.3150/20-BEJ1304">Proj. Euclid</a></li>
+        </ol>
+        <h4>2020</h4>
+        <ol class="paper">
+          <li class="jrn"> S. Bahmani, J. Romberg, <span class="semibold">&ldquo;Convex programming for estimation in
+              nonlinear recurrent models,&rdquo;</span> <i>Journal of Machine Learning Research</i>, (235):1&ndash;20,
+            2020.</br><a class="hlink marked" href="https://arxiv.org/abs/1908.09915">arXiv</a><a class="hlink marked"
               href="https://jmlr.org/papers/v21/19-723.html">JMLR</a><a class="hclink marked"
               href="./Codes/Convex-RNN.ipynb" download>Code</a></li>
           <li class="jrn"> K. Lee, S. Bahmani, J. Romberg, Y. Eldar, <span class="semibold">&ldquo;Phase retrieval of
-                low-rank matrices by anchored regression,&rdquo;</span> <i>Information and Inference: A
-              Journal of the IMA</i>, 2020.</br><a class="hlink marked" href="https://arxiv.org/abs/1910.11477">arXiv</a><a class="hlink marked" href="https://doi.org/10.1093/imaiai/iaaa018">Oxford Journals</a></li>
-	</ol>
+              low-rank matrices by anchored regression,&rdquo;</span> <i>Information and Inference: A
+              Journal of the IMA</i>, 2020.</br><a class="hlink marked"
+              href="https://arxiv.org/abs/1910.11477">arXiv</a><a class="hlink marked"
+              href="https://doi.org/10.1093/imaiai/iaaa018">Oxford Journals</a></li>
+        </ol>
         <h4>2019</h4>
         <ol class="paper">
           <li class="jrn"> S. Bahmani, <span class="semibold">&ldquo;Estimation from nonlinear observations via convex
-                programming, with application to bilinear regression,&rdquo;</span> <i>Electronic J. of Statistics</i>,
-            13(1): 1978&ndash;2011. 2019.</br><a class="hlink marked" href="https://arxiv.org/abs/1806.07307">arXiv</a><a
-              class="hlink marked" href="http://dx.doi.org/10.1214/19-EJS1567">Proj. Euclid</a></li>
+              programming, with application to bilinear regression,&rdquo;</span> <i>Electronic J. of Statistics</i>,
+            13(1): 1978&ndash;2011. 2019.</br><a class="hlink marked"
+              href="https://arxiv.org/abs/1806.07307">arXiv</a><a class="hlink marked"
+              href="http://dx.doi.org/10.1214/19-EJS1567">Proj. Euclid</a></li>
         </ol>
         <h4>2018</h4>
         <ol class="paper">
           <li class="jrn"> S. Bahmani and J. Romberg, <span class="semibold">&ldquo;Solving
-                equations of random convex functions via anchored regression,&rdquo;</span>
+              equations of random convex functions via anchored regression,&rdquo;</span>
             <i>Foundations of Computational Mathematics</i>, 19(4):813&ndash;841, 2019.</br><a class="hlink marked"
               href="https://arxiv.org/abs/1702.05327">arXiv</a><a class="hlink marked"
-              href="https://doi.org/10.1007/s10208-018-9401-4">Springer</a></li>
+              href="https://doi.org/10.1007/s10208-018-9401-4">Springer</a>
+          </li>
           <li class="jrn"> S. Bahmani, J. Romberg, P. Tetali, <span class="semibold">&ldquo;Algebraic
-                connectivity under site percolation in finite weighted graphs,&rdquo;</span>
+              connectivity under site percolation in finite weighted graphs,&rdquo;</span>
             <i>IEEE Trans. on Network Science and Engineering</i>, 5(2):86&ndash;91, 2018.
             <a class="hlink marked" href="https://arxiv.org/abs/1612.05986">arXiv</a><a class="hlink"
-              href="https://doi.org/10.1109/TNSE.2017.2757762">IEEEXplore</a></li>
+              href="https://doi.org/10.1109/TNSE.2017.2757762">IEEEXplore</a>
+          </li>
         </ol>
         <h4>2017</h4>
         <ol class="paper">
           <li class="jrn"> S. Bahmani and J. Romberg, <span class="semibold">&ldquo;A
-                flexible convex relaxation for phase retrieval,&rdquo;</span> <i>Electronic Journal of Statistics,</i>
+              flexible convex relaxation for phase retrieval,&rdquo;</span> <i>Electronic Journal of Statistics,</i>
             11(2):5254&ndash;5281, 2017. (This is
-            an extended version of the AISTATS’17 paper.)<br/><a class="hlink marked"
+            an extended version of the AISTATS’17 paper.)<br /><a class="hlink marked"
               href="https://doi.org/10.1214/17-EJS1378SI">Proj. Euclid</a></li>
           <li class="cnf"> S. Bahmani and J. Romberg, <span class="semibold">&ldquo;Phase
-                retrieval meets statistical learning theory: A flexible convex
-                relaxation,&rdquo;</span> <em>In Proceedings of the 20th
+              retrieval meets statistical learning theory: A flexible convex
+              relaxation,&rdquo;</span> <em>In Proceedings of the 20th
               International Conference on Artificial Intelligence and
               Statistics (AISTATS'17)</em>, vol. 54 of Proceedings of Machine
             Learning Research , pp. 252&ndash;260. (<strong>Best paper award</strong>)
             <a class="hlink marked" href="http://arxiv.org/abs/1610.04210">arXiv</a><a class="hlink marked"
-              href="http://proceedings.mlr.press/v54/bahmani17a.html">PMLR</a></li>
+              href="http://proceedings.mlr.press/v54/bahmani17a.html">PMLR</a>
+          </li>
         </ol>
         <h4>2016</h4>
         <ol class="paper">
           <li class="jrn"> S. Bahmani and J. Romberg, <span class="semibold">&ldquo;Near-optimal
-                estimation of simultaneously sparse and low-rank matrices from
-                nested linear measurements,&rdquo;</span> <i>Information and
+              estimation of simultaneously sparse and low-rank matrices from
+              nested linear measurements,&rdquo;</span> <i>Information and
               Inference: A Journal of the IMA</i> 5(3):331&ndash;351, 2016.</br><a class="hlink"
               href="http://arxiv.org/abs/1506.08159">arXiv</a><a class="hlink"
               href="http://dx.doi.org/10.1093/imaiai/iaw012">Oxford
               Journals</a></li>
           <li class="jrn"> S. Bahmani, P. Boufounos, and B. Raj, <span class="semibold">&ldquo;Learning
-                model-based sparsity via projected gradient descent,&rdquo;</span>
+              model-based sparsity via projected gradient descent,&rdquo;</span>
             <i>IEEE Trans. Info. Theory</i>, 62(4):2092&ndash;2099, 2016.</br><a class="hlink"
               href="http://arxiv.org/abs/1209.1557">arXiv</a><a class="hlink"
-              href="http://dx.doi.org/10.1109/TIT.2016.2515078">IEEEXplore</a></li>
+              href="http://dx.doi.org/10.1109/TIT.2016.2515078">IEEEXplore</a>
+          </li>
         </ol>
         <h4>2015</h4>
         <ol class="paper">
           <li class="cnf"> S. Bahmani and J. Romberg, <span class="semibold">&ldquo;Sketching
-                for simultaneously sparse and low-rank covariance matrices,&rdquo;</span>
+              for simultaneously sparse and low-rank covariance matrices,&rdquo;</span>
             in <em>Computational Advances in Multi-Sensor Adaptive Processing
               (CAMSAP'15), IEEE 6th International Workshop on</em>, pp.
             357&ndash;360, Cancun, Mexico, Dec. 2015.<a class="hlink" href="http://arxiv.org/abs/1510.01670">arXiv</a><a
               class="hlink" href="http://dx.doi.org/10.1109/CAMSAP.2015.7383810">IEEEXplore</a></li>
           <li class="cnf"> S. Bahmani and J. Romberg, <span class="semibold">
               &ldquo;Efficient compressive phase retrieval with constrained
-                sensing vectors,&rdquo;</span> in <em>Advances in Neural
+              sensing vectors,&rdquo;</span> in <em>Advances in Neural
               Information Processing Systems (NIPS'15),</em> vol. 28, pp.
             523&ndash;531, Montr&eacute;al, Canada, Dec. 2015.</br><a class="hlink"
               href="http://arxiv.org/abs/1507.08254">arXiv</a><a class="hlink"
               href="https://papers.nips.cc/paper/6021-efficient-compressive-phase-retrieval-with-constrained-sensing-vectors">NIPS</a>
           </li>
           <li class="jrn"> S. Bahmani and J. Romberg, <span class="semibold">&ldquo;Lifting
-                for blind deconvolution in random mask imaging:
-                Identifiability and convex relaxation,&rdquo;</span> <em>SIAM
+              for blind deconvolution in random mask imaging:
+              Identifiability and convex relaxation,&rdquo;</span> <em>SIAM
               Journal on Imaging Sciences</em>, 8(4):2203&ndash;2238, 2015.</br><a class="hlink"
               href="http://arxiv.org/abs/1501.00046">arXiv</a><a class="hlink"
               href="http://dx.doi.org/10.1137/141002165">SIAM</a></li>
           <li class="jrn"> S. Bahmani and J. Romberg, <span class="semibold">&ldquo;Compressive
-                deconvolution in random mask imaging,&rdquo;</span> <em>IEEE
+              deconvolution in random mask imaging,&rdquo;</span> <em>IEEE
               Trans. on Computational Imaging</em>, 1(4):236&ndash;246, 2015.</br><a class="hlink"
               href="http://arxiv.org/abs/1412.7890">arXiv</a><a class="hlink"
               href="http://dx.doi.org/10.1109/TCI.2015.2485941">IEEEXplore</a></li>
@@ -534,20 +633,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <h4>2013</h4>
         <ol class="paper">
           <li class="jrn"> S. Bahmani, B. Raj, and P. T. Boufounos, <span class="semibold">&ldquo;Greedy
-                sparsity-constrained optimization,&rdquo;</span> <i>Journal of
+              sparsity-constrained optimization,&rdquo;</span> <i>Journal of
               Machine Learning Research</i>, 14(3):807&ndash;841, 2013.</br><a class="hlink"
               href="http://arxiv.org/abs/1203.5483">arXiv</a><a class="hlink"
               href="http://jmlr.csail.mit.edu/papers/v14/bahmani13a.html">JMLR</a><a class="hclink"
               href="./GraSP.html">Code</a></li>
           <li class="rpt"> S. Bahmani, P. Boufounos, and B. Raj, <span class="semibold">&ldquo;Robust
-                1-bit compressive sensing via gradient support pursuit,&rdquo;</span>
+              1-bit compressive sensing via gradient support pursuit,&rdquo;</span>
             Apr. 2013.</br><a class="hlink" href="http://arxiv.org/abs/1304.6627">arXiv</a></li>
         </ol>
         <h4>2012</h4>
         <ol class="paper">
           <li class="jrn"> S. Bahmani, B. Raj, <span class="semibold">&ldquo;A
-                unifying analysis of projected gradient descent for
-                \(\ell_p\)-constrained least squares,&rdquo;</span> <em>Applied
+              unifying analysis of projected gradient descent for
+              \(\ell_p\)-constrained least squares,&rdquo;</span> <em>Applied
               and Computational Harmonic Analysis</em>, 34(3):366&ndash;378, 2012.</br><a class="hlink"
               href="http://arxiv.org/abs/1107.4623">arXiv</a><a class="hlink"
               href="http://dx.doi.org/10.1016/j.acha.2012.07.004">Elsevier</a></li>
@@ -555,35 +654,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <h4>2011</h4>
         <ol class="paper">
           <li class="cnf"> S. Bahmani, P. Boufonos, and B. Raj, <span class="semibold">&ldquo;Greedy
-                sparsity-constrained optimization,&rdquo;</span> in <i>Conf.
+              sparsity-constrained optimization,&rdquo;</span> in <i>Conf.
               Record of the 45th Asilomar Conference on Signals, Systems, and
               Computers (ASILOMAR'11)</i>, pp. 1148&ndash;1152, Pacific Grove, CA,
             Nov. 2011.
             <!--<a href="./docs/Asilomar%2711.pdf">Preprint</a>, --><a class="hlink"
               href="http://dx.doi.org/10.1109/ACSSC.2011.6190194">IEEEXplore</a><a class="hlink"
-              href="./slides/Asilomar-SBahmani.pdf">Slides</a><a class="hclink" href="./GraSP.html">Code</a> </li>
+              href="./slides/Asilomar-SBahmani.pdf">Slides</a><a class="hclink" href="./GraSP.html">Code</a>
+          </li>
         </ol>
         <h4>2010</h4>
         <ol class="paper">
-          <li class="jrn"> S. Bahmani, I. Bajić, and A. HajShirmohammadi, <span class="semibold">&ldquo;Joint decoding of
-                unequally protected
-                JPEG2000 images and Reed-Solomon codes,&rdquo;</span> <i>IEEE
+          <li class="jrn"> S. Bahmani, I. Bajić, and A. HajShirmohammadi, <span class="semibold">&ldquo;Joint decoding
+              of
+              unequally protected
+              JPEG2000 images and Reed-Solomon codes,&rdquo;</span> <i>IEEE
               Trans. Image Processing</i>, 19(10):2693&ndash;2704, Oct. 2010.</br><a class="hlink"
               href="http://dx.doi.org/10.1109/TIP.2010.2049529">IEEEXplore</a></li>
         </ol>
         <h4>2009</h4>
         <ol class="paper">
           <li class="cnf"> S. Bahmani, I. Bajić, and A. HajShirmohammadi, <span class="semibold">&ldquo;Improved joint
-                source channel decoding of
-                JPEG2000 images and Reed-Solomon codes,&rdquo;</span> <i> Proc.
+              source channel decoding of
+              JPEG2000 images and Reed-Solomon codes,&rdquo;</span> <i> Proc.
               IEEE ICC'09</i>, Dresden, Germany, Jun. 2009.</br><a class="hlink"
               href="http://dx.doi.org/10.1109/ICC.2009.5305946">IEEEXplore</a></li>
         </ol>
         <h4>2008</h4>
         <ol class="paper">
           <li class="cnf"> S. Bahmani, I. Bajić, A. HajShirmohammadi, <span class="semibold">&ldquo;Joint
-                source channel decoding of JPEG2000 images with unequal loss
-                protection,&rdquo;</span> <i>Proc. IEEE ICASSP'08</i>, pp.
+              source channel decoding of JPEG2000 images with unequal loss
+              protection,&rdquo;</span> <i>Proc. IEEE ICASSP'08</i>, pp.
             1365&ndash;1368, Las Vegas, NV, Mar. 2008.</br><a class="hlink"
               href="http://dx.doi.org/10.1109/ICASSP.2008.4517872">IEEEXplore</a></li>
         </ol>
@@ -605,23 +706,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           BY</a></div>
     </div>
   </div>
-	<!-- Default Statcounter code for My Website
+  <!-- Default Statcounter code for My Website
 https://sohail-bahmani.github.io -->
-<script type="text/javascript">
-var sc_project=12201095; 
-var sc_invisible=1; 
-var sc_security="3c36772c"; 
-var sc_https=1; 
-var sc_remove_link=1; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><img class="statcounter"
-src="https://c.statcounter.com/12201095/0/3c36772c/1/"
-alt="Web Analytics Made Easy -
-StatCounter"></div></noscript>
-<!-- End of Statcounter Code -->
+  <script type="text/javascript">
+    var sc_project = 12201095;
+    var sc_invisible = 1;
+    var sc_security = "3c36772c";
+    var sc_https = 1;
+    var sc_remove_link = 1; 
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><img class="statcounter" src="https://c.statcounter.com/12201095/0/3c36772c/1/" alt="Web Analytics Made Easy -
+StatCounter"></div>
+  </noscript>
+  <!-- End of Statcounter Code -->
 </body>
 <!-- #EndTemplate -->
 <footer>
