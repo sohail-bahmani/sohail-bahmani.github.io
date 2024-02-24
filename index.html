@@ -82,40 +82,31 @@
           <div class="accordion-title marked">Instance-Dependent Tail Bounds for Empirical Processes</div>
         </button>
         <div class="panel no-js">
-          <p>Given a function class \(\mathcal{F}\) in a normed vector space \(\left(\mathbb{V}, \lVert\cdot\rVert\right)\) of functions from \(\mathcal X\) to \(\mathbb{R}\), and i.i.d.
-            samples \(X_1,\dotsc,X_n\) of a random variable \(X\in \mathcal{X}\) such that \(\mathbb E f(X)=0\) for all
+          <p> Let \(\mathbb{V}\) be the vector space of functions from \(\mathcal X\) to \(\mathbb{R}\) whose moment generating function is bounded in a neighborhood of the origin. Given a function class \(\mathcal{F}\subset \mathbb{V}\), and i.i.d. samples \(X_1,\dotsc,X_n\) of a random variable \(X\in \mathcal{X}\) such that \(\mathbb E f(X)=0\) for all
             \(f\in \mathcal{F}\), a fundamental problem in the theory of empirical processes is finding tail bounds for
             the empirical average \(\mathbb{E}_n f(X) \overset{\scriptscriptstyle\textrm{def}}{=} n^{-1}\sum_{i=1}^n
             f(X_i)\) that hold simultaneously for all \(f \in \mathcal{F}\). Such tail bounds are predominantly
-            expressed as the sum of a term depending on some notion of ``complexity'' of the function class (Rademacher
+            expressed as the sum of a term depending on some notion of &ldquo;complexity&rdquo; of the function class (Rademacher
             complexity, V.C. dimension, etc), and a term that depends on the worst-case deviations of the random
             variables \(f(X)\) as \(f\) varies in the function class.</p>
 
-          <p>Under the appropriate distributional assumptions, for any single function \(f\in \mathcal{F}\), one can
-            write a concentration inequality the depends on the deviations of the considered function \(f\) rather than
-            the worst-case deviations across \(\mathcal{F}\). It is therefore natural to ask, if we can derive tail
-            bounds for \(\mathbb{E}_n f\) that hold for every function in \(\mathcal{F}\), but consider
-            instance-dependent deviations rather than the worst-case deviations.</p>
+          <p> For any single function \(f\in \mathbb{V}\), the Chernoff bound provides a concentration inequality that depends on the deviations of the considered function \(f\) as captured by the corresponding cumulant-generating function. Howerver, the tail bounds that hold uniformly for all functions of a function class, say \(\mathcal{F}\), are commonly expressed in terms of the worst-case deviations across \(\mathcal{F}\). It is therefore natural to ask, if we can derive tail bounds for \(\mathbb{E}_n f\) that hold for every function in \(\mathcal{F}\), but consider instance-dependent deviations rather than the worst-case deviations.</p>
 
           <p>In the case of Gaussian random variables and the class of linear functions defined by inner products with
-            unit vectors, Lugosi and Mendelson [<a href="#LM20">LM20</a>] derived such instance-dependent tail bounds,
-            and showed that it can provide significantly sharper inequalities compared to the conventional tail bounds.
+            unit vectors, Lugosi and Mendelson [<a href="#LM20">LM20</a>] derived such instance-dependent tail bounds, as a benchmark for their main goal of designing a direction-dependent robust mean estimator. They showed that it can provide significantly sharper inequalities compared to the conventional tail bounds.
             In [<a href="#Bah22">Bah22</a>], we showed how to derive instance-dependent tail bounds in a much broader
-            setting described as follows. For \(t\ge 0\) define the coefficients
-            \[w_t \overset{\scriptscriptstyle\textrm{def}}{=}\sup_{h\in \mathcal{F}-\mathcal{F}}\inf_{\lambda \ge 0}
-            \frac{t+\log\mathbb{E}e^{\lambda h(X)/\lVert h\rVert}}{\lambda}\nonumber\,.\] Furthermore, let \(A\) be a
+            setting described as follows. For \(r\ge 0\), we define the functionals \(T_r\colon \mathbb{V}\to \mathbb{R}_{\ge 0}\) as 
+            \[T_r(f) \overset{\scriptscriptstyle\textrm{def}}{=}\inf_{\lambda>0}\frac{r+\log\mathbb{E} e^{\lambda f\left(X\right)}}{\lambda}\nonumber\,,\] and show that \[\overline{T}_r(f) = \max\{T_r(f), T_r(-f)\}\,\nonumber\] defines a seminorm over \(\mathbb{V}\). Furthermore, let \(A\) be a
             map from
-            \(\mathcal{F}\) to at most \(e^k\) functions in \(\mathcal{F}\), such that \(A[0]=0\) and \[\lVert
-            A[f]\rVert \le \lVert f\rVert\mathcal\nonumber\,,\] for every \(f\in \mathcal{F}\). Define the set
+            \(\mathcal{F}\) to at most \(e^k\) functions in \(\mathcal{F}\), such that \(A[0]=0\) and \[T_r(A[f]) \le T_r(f)\nonumber\,,\] for every \(f\in \mathcal{F}\). Define the set
             \[\mathcal{A} = \lbrace f - A[f]\colon\, f\in \mathcal{F}\rbrace\,.\nonumber\]
             In [<a href="#Bah22">Bah22</a>] we define a certain generalization of Talagrand's (truncated)
             \(\gamma_\alpha\) functionals as 
-            \[\gamma(\mathcal A;\underline{\ell},r) = \inf_{(\mathcal A_i)_{i\ge 0}}\sup_{a\in \mathcal A} \sum_{\ell \ge \underline{\ell}} w_{2^{\ell-\underline{\ell}+1}r}\lVert a - \mathcal A_\ell\rVert\,,\]
-            where the infimum is taken over an increasing <i>admissible</i> sequence of subsets of \(\mathcal A\) and \(\lVert a -\mathcal A_\ell\rVert\) denotes the distance of \(a\in \mathcal A\) from \(\mathcal A_\ell\). We show that with probability at least
+            \[\gamma(\mathcal A;r, \underline{\ell}) = \inf_{(\mathcal A_i)_{i\ge 0}}\sup_{a\in \mathcal A} \sum_{\ell \ge \underline{\ell}} \overline{T}_{r + (r+1/n)2^{\ell-\underline{\ell}}}(a - \mathcal A_\ell)\,,\]
+            where the infimum is taken over an increasing <i>admissible</i> sequence of subsets of \(\mathcal A\) and \(\overline{T}_s(a -\mathcal A_\ell)\) denotes the distance of \(a\in \mathcal A\) from \(\mathcal A_\ell\) as measured by \(\overline{T}_s(\cdot)\). We show that with probability at least
             \(1-2e^{-nr}\), for every \(f\in \mathcal{F}\) we have
-            \[\mathbb{E}_n f(X) \le 2\gamma(\mathcal{A};\, \lfloor \log_2(nr/5) \rfloor, r) +2w_r \mathrm{rad}(\mathcal{A})+
-            w_{r+k/n}\lVert f\rVert\,, \nonumber\]
-            where \(\mathrm{rad}\left(\mathcal{A}\right)\) is the radius of \(\mathcal{A}\) as measured by \(\lVert\cdot\rVert\).
+            \[\mathbb{E}_n f(X)  - \overline{T}_{r+k/n}(f)\le 2\gamma(\mathcal{A};\, r, \lfloor \log_2(nr/5) \rfloor) +\mathrm{rad}_{2r+1/n}(\mathcal{A})\,, \nonumber\]
+            where \(\mathrm{rad}_s\left(\mathcal{A}\right)\) is the radius of \(\mathcal{A}\) as measured by \(\overline{T}_s(\cdot)\).
           </p>
           <h4>Bibliography</h4>
           <p>
