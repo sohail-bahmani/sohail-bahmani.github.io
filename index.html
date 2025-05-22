@@ -77,43 +77,162 @@
       <span id="research" class="anchor"></span>
       <div class="item">
         <h2>Research Vignette</h2>
+        <!-- Variational Tail Bounds for Norms of Random Vectors and Matrices-->
+        <button class="accordion active">
+          <div class="accordion-title marked">Variational Tail Bounds for Norms of Random Vectors and Matrices</div>
+        </button>
+        <div class="panel no-js">
+          <p>
+            Let \(X\in \mathbb{R}^d\) be a random vector. Given a norm \(\left\|\cdot\right\|\) defined over \(\mathbb
+            R^d\), a problem of fundamental interest is finding tail/moment bounds for \(\left\| X\right\|\). This
+            problem is studied in various forms and level of generality in functional analysis, probability theory, and
+            statistics. The standard firs step is to express \(\left\| X\right\|\) as the supremum of linear forms index
+            by \(\mathcal B_*\), the unit ball of the dual norm \(\left\|\cdot\right\|_*\), as \[\left\| X\right\| =
+            \sup_{u\in \mathcal B_*}\left\langle u,X\right\rangle\,.\nonumber\]
+            Then, we can approximate \(\mathcal B_*\) by a suitable finite set \(\widehat{\mathcal B}_*\) and apply
+            union bound to obtain a tail/moment bound from the tail probabilities or moments of \(\left\langle
+            u,X\right\rangle\) for \(u\in \widehat{\mathcal B}_*\). The <i>chaining method</i>, and it's more refined
+            version, Talagrand's method of <i>generic chaining</i> follow the mentioned basic approximation idea but
+            optimize the choice of the approximation set \(\widehat{\mathcal B}_*\) and use the union bound in a more
+            efficient way. In particular, for Gaussian processes (i.e., \(X\) being Gaussian), Talagrand's <i>majorizing
+              measures theorem</i> shows that the generic chaining method captures the size of \(\mathbb E\left\|
+            X\right\|\) up to constant factors.
+          </p>
+          <p>
+            The family of approaches mentioned above are all fundamentally based on the idea of <i>inner
+              approximation</i> of the index set. However, we can approximate the index set from the outside as well.
+            For example, for a sufficiently large positive integer \(N\), let \(u_1,\dotsc, u_N\in \mathbb R^d\) be such
+            that their absolute convex hull contains \(\mathcal B_*\), i.e., \(\mathcal B_* \subseteq
+            \mathrm{absconv}\left\{u_1,\dotsc,u_N\right\}\). Then, for any \(p\ge 1\) and every \(x\in \mathbb R^d\) we
+            can write
+            \[
+            \left\| x\right\|^p \le \max_{i=1,\dotsc,N} \left|\left\langle u_i, x\right\rangle\right|^p \le \sum_{i=1}^N
+            \left|\left\langle u_i, x\right\rangle\right|^p\,. \nonumber
+            \]
+            This commonly used elementary inequality can be refined, by observing that the sum on the right-hand can be
+            normalized by the number of term for which \(\left|\left\langle u_i, x\right\rangle\right| \ge \left\|
+            x\right\|\). In particular, we have
+            \[
+            \left\| x\right\|^p \le \frac{\sum_{i=1}^N
+            \left|\left\langle u_i, x\right\rangle\right|^p}{\sum_{i=1}^N 𝟙\left(\left|\left\langle u_i,
+            x\right\rangle\right| \ge \left\|
+            x\right\|\right)}\,. \nonumber
+            \]
+            It then follows that
+            \[
+            \left\| X\right\|^p \le \frac{\sum_{i=1}^N
+            \left|\left\langle u_i, X\right\rangle\right|^p}{\inf_{x\in \partial \mathcal B}\sum_{i=1}^N
+            𝟙\left(\left|\left\langle u_i, x\right\rangle\right| \ge
+            1\right)}\,, \nonumber
+            \]
+            where \(\partial \mathcal B\) denotes the boundary of the unit ball of \(\left\|\cdot\right\|\). We can
+            express this inequality in a more general probabilistic form, namely for a random variable \(U\in \mathbb
+            R^d\) whose distribution is \(\mathbb{P}_0\) and is independent of \(X\) we have
+            \[
+            \left\| X\right\|^p \le \frac{\mathbb{E}_0 \left(
+            \left|\left\langle U, X\right\rangle\right|^p\right)}{\inf_{x\in \partial \mathcal B}
+            \mathbb{P}_0\left(\left|\left\langle U,
+            x\right\rangle\right| \ge
+            1\right)}\,, \nonumber
+            \]
+            with \(\mathbb{E}_0\) denoting the expectation with respect to \(U\). Then taking expectation with respect
+            to \(X\) on both sides we obtain a bound for \(\mathbb{E} \left\|X\right\|^p\) which can also be converted
+            to a tail bound using Markov's inequality. Of course we can optimize the bound with respect to \(\mathbb
+            P_0\) and deduce
+            \[
+            \mathbb E\left\| X\right\|^p \le \inf_{\mathbb P_0} \sup_{x\in \partial \mathcal B} \frac{\mathbb{E} \left(
+            \left|\left\langle U, X\right\rangle\right|^p\right)}{\mathbb{P}_0\left(\left|\left\langle U,
+            x\right\rangle\right| \ge
+            1\right)}\,. \label{eq:var-moment-tail}
+            \]
+          </p>
+          <p>
+            In [<a href="#Bah22">Bah22</a>], we proposed \eqref{eq:var-moment-tail} and its underlying idea as explained above, and showed that, despite being simple, it
+            reproduces highly non-trivial tail bounds in examples that previously analyzed using more sophisticated
+            techniques. As an example, in [<a href="#Bah22">Bah22, Theorem 2</a>] we reproduced a dimension-free matrix
+            concentration inequality due to Zhivotovskiy [<a href="#Zhi24" ]>Zhi24, Theorem 1</a>] who uses the
+            <i>PAC-Bayesian</i> argument (with a clever non-standard choice of the &ldquo;posterior&rdquo;
+            distributions), and extends a similar result for sample covariance operators due to Koltchinskii and Lounici
+            [<a href="#KL17">KL17, Theorem 9</a>] who in turn relied on a <i>generic chaining</i> argument.
+          </p>
+          <h4>Bibliography</h4>
+          <p>
+            <span class="anchor" id="Bah25"></span>
+            [Bah25] S. Bahmani, <span class="semibold">&ldquo;<a href="http://arxiv.org/abs/2503.17300">Variational tail
+                bounds for norms of random vectors and matrices</a>,&rdquo;</span> arXiv preprint, 2025.
+          </p>
+          <p>
+            <span class="anchor" id="Zhi24"></span>
+            [Zhi24] N. Zhivotovskiy, <span class="semibold">&ldquo;<a
+                href="https://doi.org/10.1214/23-EJP1021">Dimension-free bounds for sums of independent matrices and
+                simple tensors via the variational
+                principle</a>&rdquo;</span>, Electron. J. Probab. 29: 1&ndash;28, 2024.
+          </p>
+          <p>
+            <span class="anchor" id="KL17"></span>
+            [KL17] V. Koltchinskii, K. Lounici, <span class="semibold">&ldquo;<a
+                href="https://doi.org/10.3150/15-BEJ730">Concentration inequalities and moment bounds for sample
+                covariance operators</a>&rdquo;</span>, Bernoulli 23(1): 110&ndash;133, 2017.
+          </p>
+        </div>
         <!-- Instance-Dependent Tail Bounds for Empirical Processes-->
         <button class="accordion active">
           <div class="accordion-title marked">Instance-Dependent Tail Bounds for Empirical Processes</div>
         </button>
         <div class="panel no-js">
-          <p> Let \(\mathbb{V}\) be the vector space of functions from \(\mathcal X\) to \(\mathbb{R}\) whose moment generating function is bounded in a neighborhood of the origin. Given a function class \(\mathcal{F}\subset \mathbb{V}\), and i.i.d. samples \(X_1,\dotsc,X_n\) of a random variable \(X\in \mathcal{X}\) such that \(\mathbb E f(X)=0\) for all
+          <p> Let \(\mathbb{V}\) be the vector space of functions from \(\mathcal X\) to \(\mathbb{R}\) whose moment
+            generating function is bounded in a neighborhood of the origin. Given a function class \(\mathcal{F}\subset
+            \mathbb{V}\), and i.i.d. samples \(X_1,\dotsc,X_n\) of a random variable \(X\in \mathcal{X}\) such that
+            \(\mathbb E f(X)=0\) for all
             \(f\in \mathcal{F}\), a fundamental problem in the theory of empirical processes is finding tail bounds for
             the empirical average \(\mathbb{E}_n f(X) \overset{\scriptscriptstyle\textrm{def}}{=} n^{-1}\sum_{i=1}^n
             f(X_i)\) that hold simultaneously for all \(f \in \mathcal{F}\). Such tail bounds are predominantly
-            expressed as the sum of a term depending on some notion of &ldquo;complexity&rdquo; of the function class (Rademacher
+            expressed as the sum of a term depending on some notion of &ldquo;complexity&rdquo; of the function class
+            (Rademacher
             complexity, V.C. dimension, etc), and a term that depends on the worst-case deviations of the random
             variables \(f(X)\) as \(f\) varies in the function class.</p>
 
-          <p> For any single function \(f\in \mathbb{V}\), the Chernoff bound provides a concentration inequality that depends on the deviations of the considered function \(f\) as captured by the corresponding cumulant-generating function. Howerver, the tail bounds that hold uniformly for all functions of a function class, say \(\mathcal{F}\), are commonly expressed in terms of the worst-case deviations across \(\mathcal{F}\). It is therefore natural to ask, if we can derive tail bounds for \(\mathbb{E}_n f\) that hold for every function in \(\mathcal{F}\), but consider instance-dependent deviations rather than the worst-case deviations.</p>
+          <p> For any single function \(f\in \mathbb{V}\), the Chernoff bound provides a concentration inequality that
+            depends on the deviations of the considered function \(f\) as captured by the corresponding
+            cumulant-generating function. Howerver, the tail bounds that hold uniformly for all functions of a function
+            class, say \(\mathcal{F}\), are commonly expressed in terms of the worst-case deviations across
+            \(\mathcal{F}\). It is therefore natural to ask, if we can derive tail bounds for \(\mathbb{E}_n f\) that
+            hold for every function in \(\mathcal{F}\), but consider instance-dependent deviations rather than the
+            worst-case deviations.</p>
 
           <p>In the case of Gaussian random variables and the class of linear functions defined by inner products with
-            unit vectors, Lugosi and Mendelson [<a href="#LM20">LM20</a>] derived such instance-dependent tail bounds, as a benchmark for their main goal of designing a direction-dependent robust mean estimator. They showed that it can provide significantly sharper inequalities compared to the conventional tail bounds.
+            unit vectors, Lugosi and Mendelson [<a href="#LM20">LM20</a>] derived such instance-dependent tail bounds,
+            as a benchmark for their main goal of designing a direction-dependent robust mean estimator. They showed
+            that it can provide significantly sharper inequalities compared to the conventional tail bounds.
             In [<a href="#Bah22">Bah22</a>], we showed how to derive instance-dependent tail bounds in a much broader
-            setting described as follows. For \(r\ge 0\), we define the functionals \(T_r\colon \mathbb{V}\to \mathbb{R}_{\ge 0}\) as 
-            \[T_r(f) \overset{\scriptscriptstyle\textrm{def}}{=}\inf_{\lambda>0}\frac{r+\log\mathbb{E} e^{\lambda f\left(X\right)}}{\lambda}\nonumber\,,\] and show that \[\overline{T}_r(f) = \max\{T_r(f), T_r(-f)\}\,\nonumber\] defines a seminorm over \(\mathbb{V}\). Furthermore, let \(A\) be a
+            setting described as follows. For \(r\ge 0\), we define the functionals \(T_r\colon \mathbb{V}\to
+            \mathbb{R}_{\ge 0}\) as
+            \[T_r(f) \overset{\scriptscriptstyle\textrm{def}}{=}\inf_{\lambda>0}\frac{r+\log\mathbb{E} e^{\lambda
+            f\left(X\right)}}{\lambda}\nonumber\,,\] and show that \[\overline{T}_r(f) = \max\{T_r(f),
+            T_r(-f)\}\,\nonumber\] defines a seminorm over \(\mathbb{V}\). Furthermore, let \(A\) be a
             map from
-            \(\mathcal{F}\) to at most \(e^k\) functions in \(\mathcal{F}\), such that \(A[0]=0\) and \[T_r(A[f]) \le T_r(f)\nonumber\,,\] for every \(f\in \mathcal{F}\). Define the set
+            \(\mathcal{F}\) to at most \(e^k\) functions in \(\mathcal{F}\), such that \(A[0]=0\) and \[T_r(A[f]) \le
+            T_r(f)\nonumber\,,\] for every \(f\in \mathcal{F}\). Define the set
             \[\mathcal{A} = \lbrace f - A[f]\colon\, f\in \mathcal{F}\rbrace\,.\nonumber\]
             In [<a href="#Bah22">Bah22</a>] we define a certain generalization of Talagrand's (truncated)
-            \(\gamma_\alpha\) functionals as 
-            \[\gamma(\mathcal A;r, \underline{\ell}) = \inf_{(\mathcal A_i)_{i\ge 0}}\sup_{a\in \mathcal A} \sum_{\ell \ge \underline{\ell}} \overline{T}_{r + (r+1/n)2^{\ell-\underline{\ell}}}(a - \mathcal A_\ell)\,,\]
-            where the infimum is taken over an increasing <i>admissible</i> sequence of subsets of \(\mathcal A\) and \(\overline{T}_s(a -\mathcal A_\ell)\) denotes the distance of \(a\in \mathcal A\) from \(\mathcal A_\ell\) as measured by \(\overline{T}_s(\cdot)\). We show that with probability at least
+            \(\gamma_\alpha\) functionals as
+            \[\gamma(\mathcal A;r, \underline{\ell}) = \inf_{(\mathcal A_i)_{i\ge 0}}\sup_{a\in \mathcal A} \sum_{\ell
+            \ge \underline{\ell}} \overline{T}_{r + (r+1/n)2^{\ell-\underline{\ell}}}(a - \mathcal A_\ell)\,,\]
+            where the infimum is taken over an increasing <i>admissible</i> sequence of subsets of \(\mathcal A\) and
+            \(\overline{T}_s(a -\mathcal A_\ell)\) denotes the distance of \(a\in \mathcal A\) from \(\mathcal A_\ell\)
+            as measured by \(\overline{T}_s(\cdot)\). We show that with probability at least
             \(1-2e^{-nr}\), for every \(f\in \mathcal{F}\) we have
-            \[\mathbb{E}_n f(X)  - \overline{T}_{r+k/n}(f)\le 2\gamma(\mathcal{A};\, r, \lfloor \log_2(nr/5) \rfloor) +\mathrm{rad}_{2r+1/n}(\mathcal{A})\,, \nonumber\]
-            where \(\mathrm{rad}_s\left(\mathcal{A}\right)\) is the radius of \(\mathcal{A}\) as measured by \(\overline{T}_s(\cdot)\).
+            \[\mathbb{E}_n f(X) - \overline{T}_{r+k/n}(f)\le 2\gamma(\mathcal{A};\, r, \lfloor \log_2(nr/5) \rfloor)
+            +\mathrm{rad}_{2r+1/n}(\mathcal{A})\,, \nonumber\]
+            where \(\mathrm{rad}_s\left(\mathcal{A}\right)\) is the radius of \(\mathcal{A}\) as measured by
+            \(\overline{T}_s(\cdot)\).
           </p>
           <h4>Bibliography</h4>
           <p>
             <span class="anchor" id="LM20"></span>
             [LM20] G. Lugosi and S. Mendelson, <span class="semibold">&ldquo;<a
-                href="https://arxiv.org/abs/2010.11921">Multivariate mean estimation with direction-dependent
-                accuracy</a>,&rdquo;</span> arXiv preprint, 2020.
+                href="https://doi.org/10.4171/jems/1321">Multivariate mean estimation with direction-dependent
+                accuracy</a>,&rdquo;</span> J. Eur. Math. Soc. 26(6): 2211&ndash;2247, 2024.
           </p>
           <p>
             <span class="anchor" id="Bah22"></span>
@@ -154,7 +273,7 @@
             \varphi_n(w) = \frac{1}{n}\sum_{i=1}^n \exp(\langle w, X_i\rangle)\nonumber\,,
             \]
             our proposed estimator is
-            \[\widehat{\mu} \in \operatorname*{argmin}_\mu \max_{w\,:\,{\Vert w\Vert}\le r_n} \langle w, \mu\rangle -
+            \[\widehat{\mu} \in \operatorname*{argmin}_\mu \max_{w\,:\,{\| w\|}\le r_n} \langle w, \mu\rangle -
             \mathrm{Im}(\varphi_n(w))\,,\nonumber\]
             for appropriately chosen radius \(r_n>0\). In particular, in the non-adversarial setting, we show that by
             choosing \(r_n = \frac{22\log(1/\delta)}{n\epsilon}\), with probability at least \(1-\delta\) the estimator
@@ -503,23 +622,29 @@
         </ul>
         <h4>In Review/Revision</h4>
         <ol class="paper begin">
-          <li class="sub">S. Bahmani, <span class="semibold">&ldquo;Variational tail bounds for norms of random vectors and matrices,&rdquo;</span> 2025.<br><a class="hlink marked"
+          <li class="sub">S. Bahmani, <span class="semibold">&ldquo;Variational tail bounds for norms of random vectors
+              and matrices,&rdquo;</span> 2025.<br><a class="hlink marked"
               href="http://arxiv.org/abs/2503.17300">arXiv</a></li>
-          <li class="sub">S. Bahmani, <span class="semibold">&ldquo;A fundamental accuracy&mdash;robustness trade-off in regression and classification,&rdquo;</span> 2024.<br><a class="hlink marked" href="http://arxiv.org/abs/2411.05853">arXiv</a></li>
+          <li class="sub">S. Bahmani, <span class="semibold">&ldquo;A fundamental accuracy&mdash;robustness trade-off in
+              regression and classification,&rdquo;</span> 2024.<br><a class="hlink marked"
+              href="http://arxiv.org/abs/2411.05853">arXiv</a></li>
           <li class="sub"> S. Bahmani, <span class="semibold">&ldquo;Instance-dependent uniform tail bounds for
               empirical processes,&rdquo;</span> 2022.<br><a class="hlink marked"
               href="http://arxiv.org/abs/2209.10053">arXiv</a></li>
         </ol>
         <h4>2024</h4>
         <ol class="paper">
-          <li class="jrn"> S. Kim, S. Bahmani, K. Lee, <span class="semibold">&ldquo;Max-linear regression by convex programming,&rdquo;</span> <i>IEEE Trans. Info. Theory</i>, 2024.<br><a class="hlink marked" href="https://doi.org/10.1109/TIT.2024.3350518">IEEEXplore</a><a class="hlink marked"
+          <li class="jrn"> S. Kim, S. Bahmani, K. Lee, <span class="semibold">&ldquo;Max-linear regression by convex
+              programming,&rdquo;</span> <i>IEEE Trans. Info. Theory</i>, 2024.<br><a class="hlink marked"
+              href="https://doi.org/10.1109/TIT.2024.3350518">IEEEXplore</a><a class="hlink marked"
               href="https://arxiv.org/abs/2103.07020">arXiv</a></li>
         </ol>
         <h4>2021</h4>
         <ol class="paper">
           <li class="jrn"> S. Bahmani, K. Lee, <span class="semibold">&ldquo;Low-rank matrix estimation from rank-one
               projections by unlifted convex optimization&rdquo;</span>, <i>SIAM J. on Matrix Analysis
-              and Applications</i>, 2021.<br><a class="hlink marked" href="https://arxiv.org/abs/2004.02718">arXiv</a><a class="hlink marked" href="https://doi.org/10.1137/20M1330099">SIAM</a>
+              and Applications</i>, 2021.<br><a class="hlink marked" href="https://arxiv.org/abs/2004.02718">arXiv</a><a
+              class="hlink marked" href="https://doi.org/10.1137/20M1330099">SIAM</a>
           </li>
           <li class="jrn"> S. Bahmani, <span class="semibold">&ldquo;Nearly optimal robust mean estimation via empirical
               characteristic function,&rdquo;</span> <i>Bernoulli</i>, 27(3): 2139&ndash;2158, 2021.</br><a
